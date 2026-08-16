@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd zuum-source && npm install && npm run build",
-  "outputDirectory": "zuum-source/.next",
-  "installCommand": "cd zuum-source && npm install",
-  "framework": "nextjs"
-}
