@@ -275,7 +275,7 @@ export function Hero() {
                     <Input
                       value={form.name}
                       onChange={(e) => update('name', e.target.value)}
-                      placeholder="e.g. Rahul Sharma"
+                      placeholder="e.g. Raghav Singh"
                       autoComplete="name"
                     />
                   </Field>
