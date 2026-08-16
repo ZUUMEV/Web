@@ -1,0 +1,328 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans), "Geist", system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-strong: var(--brand-strong);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+  --primary: #00FF68;
+  --primary-foreground: #0a0a0a;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #0F172A;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #ECFDF5;
+  --accent-foreground: #064E3B;
+  --destructive: #EF4444;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #00FF68;
+  --brand: #00FF68;
+  --brand-foreground: #0a0a0a;
+  --brand-soft: #ECFDF5;
+  --brand-strong: #06B6D4;
+  --brand-cyan: #22D3EE;
+  --brand-purple: #A855F7;
+  --brand-yellow: #FBBF24;
+  --brand-rose: #F43F5E;
+  --chart-1: #00FF68;
+  --chart-2: #06B6D4;
+  --chart-3: #A855F7;
+  --chart-4: #FBBF24;
+  --chart-5: #F43F5E;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0F172A;
+  --sidebar-primary: #00FF68;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #ECFDF5;
+  --sidebar-accent-foreground: #064E3B;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #00FF68;
+}
+
+.dark {
+  --background: #0B1120;
+  --foreground: #F8FAFC;
+  --card: #131C2E;
+  --card-foreground: #F8FAFC;
+  --popover: #131C2E;
+  --popover-foreground: #F8FAFC;
+  --primary: #00FF68;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1E293B;
+  --secondary-foreground: #F8FAFC;
+  --muted: #182234;
+  --muted-foreground: #94A3B8;
+  --accent: #1E3A5F;
+  --accent-foreground: #E2E8F0;
+  --destructive: #EF4444;
+  --border: rgba(148, 163, 184, 0.12);
+  --input: rgba(148, 163, 184, 0.16);
+  --ring: #00FF68;
+  --brand: #00FF68;
+  --brand-foreground: #0a0a0a;
+  --brand-soft: #0F2922;
+  --brand-strong: #06B6D4;
+  --brand-cyan: #22D3EE;
+  --brand-purple: #A855F7;
+  --brand-yellow: #FBBF24;
+  --brand-rose: #F43F5E;
+  --chart-1: #00FF68;
+  --chart-2: #06B6D4;
+  --chart-3: #A855F7;
+  --chart-4: #FBBF24;
+  --chart-5: #F43F5E;
+  --sidebar: #131C2E;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #00FF68;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #1E3A5F;
+  --sidebar-accent-foreground: #E2E8F0;
+  --sidebar-border: rgba(148, 163, 184, 0.12);
+  --sidebar-ring: #00FF68;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    font-family: var(--font-sans), "Geist", system-ui, sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), "Geist", system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv01", "cv11";
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% -5%, rgba(0, 255, 104, 0.06), transparent 55%),
+      radial-gradient(ellipse 70% 45% at 85% 10%, rgba(6, 182, 212, 0.05), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(168, 85, 247, 0.04), transparent 60%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans), "Geist", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Brand gradient utilities — green (#00FF68) + cyan + purple blend like reference site */
+.bg-brand-gradient {
+  background-image: linear-gradient(135deg, #00FF68 0%, #06B6D4 50%, #A855F7 100%);
+}
+.text-brand-gradient {
+  background-image: linear-gradient(135deg, #00FF68 0%, #22D3EE 50%, #A855F7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Half-white / half-gradient heading — used for section titles */
+.text-split-gradient {
+  color: var(--foreground);
+}
+.text-split-gradient > span {
+  background-image: linear-gradient(135deg, #00FF68 0%, #22D3EE 50%, #A855F7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glow effect — used sparingly */
+.glow-brand {
+  box-shadow: 0 0 0 1px rgba(0, 255, 104, 0.2), 0 4px 24px -8px rgba(6, 182, 212, 0.3);
+}
+.dark .glow-brand {
+  box-shadow: 0 0 0 1px rgba(0, 255, 104, 0.22), 0 4px 24px -8px rgba(6, 182, 212, 0.35);
+}
+
+/* Hero radial gradient background — green, cyan, purple soft glows */
+.hero-radial {
+  background:
+    radial-gradient(ellipse 70% 50% at 75% 5%, rgba(0, 255, 104, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 45% at 15% 95%, rgba(6, 182, 212, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 80%, rgba(168, 85, 247, 0.07) 0%, transparent 60%);
+}
+
+/* Section gradient backgrounds — very subtle */
+.section-gradient {
+  background: linear-gradient(180deg, transparent 0%, rgba(6, 182, 212, 0.03) 50%, transparent 100%);
+}
+
+/* Animated grid background — subtle */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Animated traveling border light — uses @property to animate the conic gradient angle */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.animated-border-box {
+  position: relative;
+  isolation: isolate;
+  /* Static subtle border as base */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.animated-border-box::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  --border-angle: 0deg;
+  /* Gradient arc: fades in (0-30°), bright middle (30-90°), fades out (90-120°),
+     then fully transparent (120-360°). Symmetric fade so both head and tail are smooth. */
+  background: conic-gradient(
+    from var(--border-angle),
+    rgba(0, 255, 104, 0) 0deg,
+    #00FF68 30deg,
+    #22D3EE 60deg,
+    #A855F7 90deg,
+    rgba(168, 85, 247, 0) 120deg,
+    transparent 120deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+  animation: border-spin 4s linear infinite;
+}
+@keyframes border-spin {
+  to { --border-angle: 360deg; }
+}
+
+/* Marquee animations — left and right variants */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.animate-marquee {
+  animation: marquee-left 36s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee-right 36s linear infinite;
+}
+
+/* Floating */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Soft pulse for badges */
+@keyframes softPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.04); }
+}
+.animate-soft-pulse {
+  animation: softPulse 2.2s ease-in-out infinite;
+}
+
+/* Chip blink — entire chip pulses between dim and bright brand gradient */
+@keyframes chipBlink {
+  0%, 100% {
+    background-color: rgba(0, 255, 104, 0.12);
+    border-color: rgba(0, 255, 104, 0.5);
+    color: #00FF68;
+    box-shadow: 0 0 0 0 rgba(0, 255, 104, 0);
+  }
+  50% {
+    background-image: linear-gradient(135deg, #00FF68 0%, #06B6D4 100%);
+    background-color: #00FF68;
+    border-color: #00FF68;
+    color: #0a0a0a;
+    box-shadow: 0 0 22px 2px rgba(0, 255, 104, 0.6);
+  }
+}
+.animate-chip-blink {
+  animation: chipBlink 1.8s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00FF68, #06B6D4, #A855F7);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22D3EE, #A855F7, #00FF68);
+}
+
+/* Hide number spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
