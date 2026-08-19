@@ -61,13 +61,22 @@ export const metadata: Metadata = {
     url: "https://zuum.co.in",
     siteName: "ZUUM Electric",
     type: "website",
-    locale: "hi_IN",
+    locale: "en_IN", // P0 fix: hi_IN → en_IN (page content English hai)
+    images: [
+      {
+        url: "/og-image.png", // metadataBase se https://zuum.co.in/og-image.png ban jata hai
+        width: 1200,
+        height: 630,
+        alt: "ZUUM Electric — EV Scooter Rentals for Delivery Partners. Earn ₹30k–₹45k/month.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ZUUM Electric — EV Rentals for Delivery Partners",
     description:
       "Bike + Fuel + Helmet. Earn ₹30k–₹45k/month. Zero fuel, zero maintenance.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://zuum.co.in",
