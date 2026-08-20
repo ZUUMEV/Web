@@ -5,7 +5,7 @@ export const SITE = {
   phone: "7900333002",
   phoneDisplay: "+91 79003 33002",
   whatsapp: "917900333002",
-  email: "zuumelectric@gmail.com",
+  email: "info@zuum.co.in",
   locations: ["Haldwani", "Rudrapur"],
   salaryRange: "₹35,000",
 }
