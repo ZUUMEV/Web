@@ -223,6 +223,7 @@ export function Footer() {
               Refund Policy
             </Link>
           </div>
+          </div>
         </div>
     </footer>
   )
