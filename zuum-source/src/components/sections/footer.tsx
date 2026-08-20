@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { MessageCircle, Phone, Mail, MapPin, Leaf } from 'lucide-react'
 import { SITE, WHATSAPP_BASE, TEL_BASE } from '@/lib/site'
 
@@ -203,21 +204,26 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
+                {/* Bottom bar */}
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
           <div>
             © {new Date().getFullYear()} ZUUM Electric. Made with passion by ZUUM. All rights reserved.
           </div>
-          <div className="flex items-center gap-4">
-            <a href="#" className="transition-colors hover:text-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link href="/contact" className="transition-colors hover:text-foreground">
+              Contact
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-foreground">
               Terms &amp; Conditions
-            </a>
-            <a href="#" className="transition-colors hover:text-foreground">
+            </Link>
+            <Link href="/privacy" className="transition-colors hover:text-foreground">
               Privacy Policy
-            </a>
+            </Link>
+            <Link href="/refund-policy" className="transition-colors hover:text-foreground">
+              Refund Policy
+            </Link>
           </div>
         </div>
-      </div>
     </footer>
   )
 }
