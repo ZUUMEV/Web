@@ -65,7 +65,7 @@ export function Footer() {
   return (
     <footer className="mt-auto border-t border-border bg-card/40 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
@@ -106,7 +106,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+        {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold">Quick Links</h4>
             <ul className="mt-3 space-y-2 text-sm">
@@ -117,31 +117,20 @@ export function Footer() {
                 ['Cost Comparison', '#compare'],
                 ['FAQ', '#faq'],
                 ['Our Impact', '#impact'],
-                ['Haldwani', '/locations/haldwani'],
-                ['Rudrapur', '/locations/rudrapur'],
-                ].map(([label, href]) => (
+              ].map(([label, href]) => (
                 <li key={href}>
-                  {href.startsWith('#') ? (
-                    <a
-                      href={href}
-                      className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {label}
-                    </a>
-                  ) : (
-                    <Link
-                      href={href}
-                      className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {label}
-                    </Link>
-                  )}
+                  <a
+                    href={href}
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {label}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Plans */}
+                    {/* Plans */}
           <div>
             <h4 className="text-sm font-semibold">Plans</h4>
             <ul className="mt-3 space-y-2 text-sm">
@@ -149,6 +138,37 @@ export function Footer() {
               <li className="text-muted-foreground">Weekly — ₹1,600 / 700 km</li>
               <li className="text-muted-foreground">Monthly — ₹6,000 / 3,000 km</li>
               <li className="text-muted-foreground">Deposit — ₹4,000 (refundable)</li>
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h4 className="text-sm font-semibold">Locations</h4>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/locations/uttarakhand"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Uttarakhand
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/locations/haldwani"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Haldwani
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/locations/rudrapur"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Rudrapur
+                </Link>
+              </li>
             </ul>
           </div>
 
