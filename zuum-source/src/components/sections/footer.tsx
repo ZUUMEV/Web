@@ -117,14 +117,25 @@ export function Footer() {
                 ['Cost Comparison', '#compare'],
                 ['FAQ', '#faq'],
                 ['Our Impact', '#impact'],
-              ].map(([label, href]) => (
+                ['Haldwani', '/locations/haldwani'],
+                ['Rudrapur', '/locations/rudrapur'],
+                ].map(([label, href]) => (
                 <li key={href}>
-                  <a
-                    href={href}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {label}
-                  </a>
+                  {href.startsWith('#') ? (
+                    <a
+                      href={href}
+                      className="text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={href}
+                      className="text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
