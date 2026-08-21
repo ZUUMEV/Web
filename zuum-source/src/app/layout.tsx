@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { OrganizationSchema, WebsiteSchema } from "@/components/organization-schema";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -100,6 +101,8 @@ export default function RootLayout({
           {children}
           <Toaster />
           <GoogleAnalytics gaId="G-SP89GN5NF0" />
+          <OrganizationSchema />
+          <WebsiteSchema />
         </ThemeProvider>
       </body>
     </html>
