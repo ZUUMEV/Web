@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MessageCircle, MapPin, ArrowLeft, ChevronRight, Leaf, Zap, Shield, Clock } from 'lucide-react'
 import { WHATSAPP_BASE } from '@/lib/site'
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 
 export const metadata: Metadata = {
   title: 'EV Scooter Rentals in Uttarakhand | ZUUM Electric — Earn ₹35,000+/Month',
@@ -298,6 +299,12 @@ export default function UttarakhandPage() {
             },
           }),
         }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Uttarakhand', url: 'https://zuum.co.in/locations/uttarakhand' },
+        ]}
       />
     </main>
   )
