@@ -6,6 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://zuum.co.in/sitemap.xml',
+    sitemap: [
+      'https://zuum.co.in/sitemap.xml',
+    ],
+    host: 'https://zuum.co.in',
   }
 }
