@@ -154,7 +154,7 @@ export function Hero() {
             >
               <span className="text-foreground">Earn up to</span>
               <br />
-              <span className="text-brand-gradient">₹35,000 Per Month</span>
+              <span className="text-brand-gradient">₹35,000+ Per Month</span>
             </motion.h1>
 
             <motion.p
