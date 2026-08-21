@@ -18,25 +18,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://zuum.co.in'),
-  title: "ZUUM Electric — EV Scooter Rentals for Delivery Partners | Earn ₹30k–₹45k/Month",
+  metadataBase: new URL("https://zuum.co.in"),
+  title: "Zuum Electric - Delivery Partner Job Earn ₹35,000+/Month",
   description:
-    "Join ZUUM — India's premium EV rental platform for delivery partners. Get Bike + Fuel + Helmet. Earn ₹30,000 to ₹45,000/month. Zero fuel cost, zero maintenance. Plans from ₹300/day.",
+    "Free bike, fuel & helmet with Zuum Electric! Earn ₹35,000+/month as a delivery partner in Uttarakhand. Daily/weekly/monthly EV rentals. Apply now!",
   keywords: [
-    "ZUUM",
-    "ZUUM Electric",
-    "EV rental",
-    "electric scooter rental",
-    "electric scooter",
-    "delivery partner jobs",
-    "Swiggy Zomato Zepto delivery",
-    "Haldwani Rudrapur jobs",
-    "EV bike rental India",
-    "delivery partner bike",
-    "zero emission mobility",
-    "electric vehicle rental Uttarakhand",
-    "bike on rent for delivery",
-    "earn with EV scooter",
+    "Zuum rental service",
+    "delivery job",
+    "bike rent",
+    "scooty rent",
+    "Zomato delivery job",
+    "Swiggy delivery job",
+    "gig job Uttarakhand",
+    "delivery job Uttarakhand",
+    "Haldwani bike rent",
+    "Rudrapur bike rent",
+    "EV rental service",
   ],
   authors: [{ name: "ZUUM Electric" }],
   robots: {
@@ -56,31 +53,31 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "ZUUM Electric — EV Scooter Rentals for Delivery Partners",
+    title: "Zuum Electric - Delivery Partner Job Earn ₹35,000+/Month",
     description:
-      "Get Bike + Fuel + Helmet. Earn ₹30k–₹45k/month. Zero fuel, zero maintenance. Plans from ₹300/day.",
-    url: "https://zuum.co.in",
-    siteName: "ZUUM Electric",
+      "Free bike, fuel & helmet with Zuum Electric! Earn ₹35,000+/month as a delivery partner in Uttarakhand. Daily/weekly/monthly EV rentals. Apply now!",
+    url: "https://zuum.co.in/",
+    siteName: "Zuum Electric",
     type: "website",
-    locale: "en_IN", // P0 fix: hi_IN → en_IN (page content English hai)
+    locale: "en_IN",
     images: [
       {
-        url: "/og-image.png", // metadataBase se https://zuum.co.in/og-image.png ban jata hai
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ZUUM Electric — EV Scooter Rentals for Delivery Partners. Earn ₹30k–₹45k/month.",
+        alt: "Zuum Electric - Delivery Partner Job Earn ₹35,000+/Month",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZUUM Electric — EV Rentals for Delivery Partners",
+    title: "Zuum Electric - Delivery Partner Job Earn ₹35,000+/Month",
     description:
-      "Bike + Fuel + Helmet. Earn ₹30k–₹45k/month. Zero fuel, zero maintenance.",
+      "Free bike, fuel & helmet with Zuum Electric! Earn ₹35,000+/month as a delivery partner in Uttarakhand. Daily/weekly/monthly EV rentals. Apply now!",
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://zuum.co.in",
+    canonical: "https://zuum.co.in/",
   },
 };
 
