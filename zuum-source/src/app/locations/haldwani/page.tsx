@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MessageCircle, Phone, MapPin, ArrowLeft, ChevronRight, Zap, Shield, Clock, Leaf, TrendingUp } from 'lucide-react'
 import { WHATSAPP_BASE, TEL_BASE } from '@/lib/site'
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 
 export const metadata: Metadata = {
   title: 'EV Scooter Rent in Haldwani - Earn ₹35,000+/Month | ZUUM Electric',
@@ -359,6 +360,13 @@ export default function HaldwaniPage() {
             })),
           }),
         }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Uttarakhand', url: 'https://zuum.co.in/locations/uttarakhand' },
+          { name: 'Haldwani', url: 'https://zuum.co.in/locations/haldwani' },
+        ]}
       />
     </main>
   )
