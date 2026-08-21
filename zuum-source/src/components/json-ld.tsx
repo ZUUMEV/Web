@@ -142,7 +142,7 @@ export function FAQSchema() {
     {
       question: 'How much can I earn with ZUUM?',
       answer:
-        'Delivery partners earn between ₹30,000 to ₹45,000 per month after rental costs. With zero fuel expense and zero maintenance, your savings are maximum.',
+                'Delivery partners earn ₹35,000+ per month after rental costs. With zero fuel expense and zero maintenance, your savings are maximum.',
     },
     {
       question: 'What are the rental plans available?',
