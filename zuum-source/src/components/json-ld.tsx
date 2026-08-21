@@ -9,7 +9,7 @@ export function LocalBusinessSchema() {
     '@type': 'LocalBusiness',
     name: 'ZUUM Electric',
     description:
-      'India\'s premium EV scooter rental platform for delivery partners. Get Bike + Fuel + Helmet. Earn ₹30,000 to ₹45,000/month.',
+      'India\'s premium EV scooter rental platform for delivery partners. Get Bike + Fuel + Helmet. Earn ₹35,000+/month.',
     url: 'https://zuum.co.in',
     telephone: '+917900333002',
     email: 'info@zuum.co.in',
