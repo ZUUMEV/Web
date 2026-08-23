@@ -151,26 +151,32 @@ Position yourself near Mall Road or Kathgodam during peak hours.
 ## How to Get a Scooter in Haldwani
 
 ### Option 1: Buy Petrol Scooter (₹1 Lakh+)
-- **On-road price:** ₹1,00,000-1,10,000 (scooter + RTO + insurance + accessories)
-- **Popular models:** Honda Activa (₹1.05L), TVS Jupiter (₹1L), Hero Maestro (₹98K)
-- **Monthly EMI (if financed):** ₹3,321 (₹1L loan, 12%, 3 years)
-- **Monthly fuel (100 km/day):** ₹6,721
-- **Monthly maintenance + wear & tear:** ₹1,842
-- **Insurance, GPS, accessories:** ₹650/month
-- **Daily road expenses:** ₹400
-- **TOTAL monthly cost: ₹12,274**
-- **Risks:** Theft, accident, depreciation (60% in 3 years)
+
+| Item | Details |
+|---|---|
+| On-road price | ₹1,00,000-1,10,000 (scooter + RTO + insurance + accessories) |
+| Popular models | Honda Activa (₹1.05L), TVS Jupiter (₹1L), Hero Maestro (₹98K) |
+| Monthly EMI (if financed) | ₹3,321 (₹1L loan, 12%, 3 years) |
+| Monthly fuel (100 km/day) | ₹6,721 |
+| Monthly maintenance + wear & tear | ₹1,842 |
+| Insurance, GPS, accessories | ₹650/month |
+| Daily road expenses | ₹400 |
+| **TOTAL monthly cost** | **₹12,274** |
+| Risks | Theft, accident, depreciation (60% in 3 years) |
 
 ### Option 2: Rent EV Scooter from ZUUM (₹4,000 Deposit)
-- **Upfront:** ₹4,000 refundable deposit only
-- **Monthly rental:** ₹6,000 (all inclusive)
-- **Fuel (charging):** ₹0 (free at ZUUM stations)
-- **Maintenance:** ₹0 (covered by ZUUM)
-- **Insurance:** ₹0 (comprehensive included)
-- **Helmet:** ₹0 (provided by ZUUM)
-- **24/7 breakdown support:** ₹0 (included)
-- **TOTAL monthly cost: ₹6,200**
-- **Monthly savings vs petrol: ₹6,074**
+
+| Item | Details |
+|---|---|
+| Upfront | ₹4,000 refundable deposit only |
+| Monthly rental | ₹6,000 (all inclusive) |
+| Fuel (charging) | ₹0 (free at ZUUM stations) |
+| Maintenance | ₹0 (covered by ZUUM) |
+| Insurance | ₹0 (comprehensive included) |
+| Helmet | ₹0 (provided by ZUUM) |
+| 24/7 breakdown support | ₹0 (included) |
+| **TOTAL monthly cost** | **₹6,200** |
+| Monthly savings vs petrol | **₹6,074** |
 
 ### The Verdict
 
@@ -284,8 +290,11 @@ Looking at the breakdown above, fuel alone takes up ₹6,721 — that is 55% of 
 ## Option 2: Renting a ZUUM EV Scooter
 
 ### Upfront Cost
-- Refundable security deposit: ₹4,000
-- **Total upfront:** ₹4,000 (refundable!)
+
+| Item | Amount |
+|---|---|
+| Refundable security deposit | ₹4,000 |
+| **Total upfront** | **₹4,000 (refundable!)** |
 
 ### Monthly Costs (100 km/day, 3,000 km/month)
 
@@ -474,23 +483,29 @@ Register on 2-3 platforms. When one is slow, switch to another. This ensures con
 ## Step 3: Get a Scooter
 
 ### Option A: Buy Petrol Scooter (₹1 Lakh+)
-- **On-road price:** ₹1,00,000-1,10,000
-- **Monthly EMI:** ₹3,321 (₹1L loan, 12%, 3 years)
-- **Monthly fuel (100 km/day):** ₹6,721
-- **Monthly maintenance + wear & tear:** ₹1,842
-- **Insurance, GPS, accessories:** ₹650/month
-- **Daily road expenses:** ₹400
-- **TOTAL monthly cost: ₹12,274**
+
+| Item | Cost |
+|---|---|
+| On-road price | ₹1,00,000-1,10,000 |
+| Monthly EMI | ₹3,321 (₹1L loan, 12%, 3 years) |
+| Monthly fuel (100 km/day) | ₹6,721 |
+| Monthly maintenance + wear & tear | ₹1,842 |
+| Insurance, GPS, accessories | ₹650/month |
+| Daily road expenses | ₹400 |
+| **TOTAL monthly cost** | **₹12,274** |
 
 ### Option B: Rent EV Scooter (Recommended)
-- **Upfront:** ₹4,000 refundable deposit only
-- **Monthly rental:** ₹6,000 (all inclusive)
-- **Fuel:** ₹0 (free charging)
-- **Maintenance:** ₹0
-- **Insurance:** ₹0 (comprehensive included)
-- **Helmet:** ₹0 (provided)
-- **TOTAL monthly cost: ₹6,200**
-- **Monthly savings: ₹6,074**
+
+| Item | Cost |
+|---|---|
+| Upfront | ₹4,000 refundable deposit only |
+| Monthly rental | ₹6,000 (all inclusive) |
+| Fuel | ₹0 (free charging) |
+| Maintenance | ₹0 |
+| Insurance | ₹0 (comprehensive included) |
+| Helmet | ₹0 (provided) |
+| **TOTAL monthly cost** | **₹6,200** |
+| **Monthly savings** | **₹6,074** |
 
 The choice is clear. Renting an EV from ZUUM costs ₹6,200/month versus ₹12,274/month for petrol — you save ₹6,074 every month while enjoying zero maintenance, free charging, and 24/7 breakdown support.
 
@@ -694,17 +709,17 @@ For Haldwani and Rudrapur delivery partners, TVS and Hero have the strongest loc
 
 ## Rent vs Buy: The Smarter Option
 
-### Buying an EV Scooter
-- Upfront: ₹62,000-1,60,000
-- Monthly: ₹3,700-6,800 (EMI + insurance + maintenance + charging)
+| Factor | Buying an EV Scooter | Renting from ZUUM Electric |
+|---|---|---|
+| Upfront cost | ₹62,000-1,60,000 | ₹4,000 (refundable deposit) |
+| Monthly cost | ₹3,700-6,800 (EMI + insurance + maintenance + charging) | ₹6,000 (all inclusive) |
+| 24/7 breakdown support | Not included | Included |
+| Battery swaps | Pay per swap | Free at any ZUUM station |
+| Helmet | Buy yourself | Provided free |
+| Insurance | Buy + renew yearly | Comprehensive included |
+| Maintenance | Pay per service | Covered by ZUUM |
 
 Buying makes sense if you plan to ride the same scooter for 3+ years, have access to home charging, and live near a service center. But for most delivery partners in tier-2 cities, these conditions do not apply — and the upfront cost of ₹1+ lakh is a major barrier.
-
-### Renting from ZUUM Electric
-- Upfront: ₹4,000 refundable deposit
-- Monthly: ₹6,000 (all inclusive — scooter + insurance + helmet + maintenance + free charging)
-- 24/7 breakdown support included
-- Battery swaps free at any ZUUM station
 
 **For most delivery partners, renting is the smarter choice.** No upfront cost, no maintenance headache, no resale value worries. You pay ₹6,000/month and ride worry-free. If your earnings drop or you want to switch cities, you simply return the scooter and get your ₹4,000 deposit back.
 
