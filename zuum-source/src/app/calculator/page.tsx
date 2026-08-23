@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ChevronRight, Calculator, TrendingUp, PiggyBank, Zap, Shield, AlertCircle } from 'lucide-react'
+import { ArrowLeft, ChevronRight, Calculator, PiggyBank } from 'lucide-react'
 import { PageShell } from '@/components/page-shell'
 import { CTASection } from '@/components/cta-section'
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
