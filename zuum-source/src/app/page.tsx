@@ -1,4 +1,3 @@
-import { Header } from '@/components/sections/header'
 import { Hero } from '@/components/sections/hero'
 import { PartnerMarquee } from '@/components/sections/partner-marquee'
 import { HowToJoin } from '@/components/sections/how-to-join'
@@ -7,34 +6,30 @@ import { Benefits } from '@/components/sections/benefits'
 import { Compare } from '@/components/sections/compare'
 import { FAQ } from '@/components/sections/faq'
 import { Impact } from '@/components/sections/impact'
-import { CTA } from '@/components/sections/cta'
-import { Footer } from '@/components/sections/footer'
-import { FloatingWhatsApp } from '@/components/sections/floating-whatsapp'
+import { CTASection } from '@/components/cta-section'
+import { PageShell } from '@/components/page-shell'
 import { LocalBusinessSchema, FAQSchema } from '@/components/json-ld'
 
 export default function Home() {
   return (
     <>
-      {/* JSON-LD Structured Data for Google Rich Results */}
       <LocalBusinessSchema />
       <FAQSchema />
-
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
-          <Hero />
-          <PartnerMarquee />
-          <HowToJoin />
-          <Plans />
-          <Benefits />
-          <Compare />
-          <FAQ />
-          <Impact />
-          <CTA />
-        </main>
-        <Footer />
-        <FloatingWhatsApp />
-      </div>
+      <PageShell>
+        <Hero />
+        <PartnerMarquee />
+        <HowToJoin />
+        <Plans />
+        <Benefits />
+        <Compare />
+        <FAQ />
+        <Impact />
+        <CTASection
+          badge="Ready to Ride"
+          title={<>Ready to start your <span>delivery journey?</span></>}
+          subtitle={<>Join <strong className="text-foreground">75+ riders</strong> in Haldwani & Rudrapur. Book your EV scooter today and start earning with zero fuel cost.</>}
+        />
+      </PageShell>
     </>
   )
 }
