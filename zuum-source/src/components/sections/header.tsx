@@ -10,12 +10,12 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 const NAV = [
-  { label: 'Plans', href: '#plans' },
-  { label: 'How to Join', href: '#how-to-join' },
-  { label: 'Benefits', href: '#benefits' },
-  { label: 'Compare', href: '#compare' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Impact', href: '#impact' },
+  { label: 'Plans', href: '/#plans' },
+  { label: 'How to Join', href: '/#how-to-join' },
+  { label: 'Benefits', href: '/#benefits' },
+  { label: 'Compare', href: '/#compare' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Impact', href: '/#impact' },
 ]
 
 export function Header() {
