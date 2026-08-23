@@ -6,6 +6,7 @@ import { Benefits } from '@/components/sections/benefits'
 import { Compare } from '@/components/sections/compare'
 import { FAQ } from '@/components/sections/faq'
 import { Impact } from '@/components/sections/impact'
+import { HomeHindiFAQ } from '@/components/sections/home-hindi-faq'
 import { CTASection } from '@/components/cta-section'
 import { PageShell } from '@/components/page-shell'
 import { LocalBusinessSchema, FAQSchema } from '@/components/json-ld'
@@ -24,6 +25,7 @@ export default function Home() {
         <Compare />
         <FAQ />
         <Impact />
+        <HomeHindiFAQ />
         <CTASection
           badge="Ready to Ride"
           title={<>Ready to start your <span>delivery journey?</span></>}
