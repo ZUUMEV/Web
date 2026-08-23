@@ -11,7 +11,7 @@ interface LegalShellProps {
 
 export function LegalShell({ title, description, lastUpdated, children }: LegalShellProps) {
   return (
-    <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+  <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
       <Link
         href="/"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
