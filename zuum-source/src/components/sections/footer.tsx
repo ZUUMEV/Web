@@ -106,25 +106,26 @@ export function Footer() {
             </div>
           </div>
 
-        {/* Quick Links */}
+         {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold">Quick Links</h4>
             <ul className="mt-3 space-y-2 text-sm">
               {[
-                ['Plans', '#plans'],
-                ['How to Join', '#how-to-join'],
-                ['Benefits', '#benefits'],
-                ['Cost Comparison', '#compare'],
-                ['FAQ', '#faq'],
-                ['Our Impact', '#impact'],
+                ['Home', '/'],
+                ['Plans', '/#plans'],
+                ['How to Join', '/#how-to-join'],
+                ['Benefits', '/#benefits'],
+                ['Cost Comparison', '/#compare'],
+                ['FAQ', '/#faq'],
+                ['Our Impact', '/#impact'],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <a
+                  <Link
                     href={href}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
