@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { LegalShell, LegalSection, LegalSubSection } from '@/components/legal-shell'
+import { PageShell } from '@/components/page-shell'
+import { CTASection } from '@/components/cta-section'
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | ZUUM Electric',
@@ -17,11 +20,18 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalShell
-      title="Terms of Service"
-      description="The rental agreement between you and ZUUM Electric for EV scooter rentals in Haldwani and Rudrapur, Uttarakhand."
-      lastUpdated="August 2026"
-    >
+    <PageShell>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Terms of Service', url: 'https://zuum.co.in/terms' },
+        ]}
+      />
+      <LegalShell
+        title="Terms of Service"
+        description="The rental agreement between you and ZUUM Electric for EV scooter rentals in Haldwani and Rudrapur, Uttarakhand."
+        lastUpdated="August 2026"
+      >
       <LegalSection title="1. Acceptance of Terms">
         <p>
           By accessing or using the ZUUM Electric website (https://zuum.co.in), our WhatsApp business
@@ -266,7 +276,17 @@ export default function TermsPage() {
           <li><strong>Phone:</strong> +91 79003 33002</li>
           <li><strong>WhatsApp:</strong> https://wa.me/917900333002</li>
         </ul>
-      </LegalSection>
-    </LegalShell>
+            </LegalSection>
+      </LegalShell>
+
+      <CTASection
+        badge="Questions?"
+        title={<>Still have <span>questions?</span></>}
+        subtitle="Our team is available 9:00 AM to 9:00 PM, all days. WhatsApp us for the fastest response."
+        whatsappMessage="Hi ZUUM, I have a question about the Terms of Service."
+        showRegister={false}
+        padded={false}
+      />
+    </PageShell>
   )
 }
