@@ -82,6 +82,29 @@ const benefits = [
   },
 ]
 
+const hindiFaqs = [
+  {
+    q: 'उत्तराखंड में ज़ूम की सेवा कहाँ-कहाँ उपलब्ध है?',
+    a: 'अभी हम हल्द्वानी और रुद्रपुर में पूरी तरह सक्रिय हैं। देहरादून, हरिद्वार, बरेली, काशीपुर और रुड़की में जल्द ही शुरू होंगे। हल्द्वानी कुमाऊं का मुख्य शहर है और रुद्रपुर उधम सिंह नगर का औद्योगिक केंद्र — दोनों जगह डिलीवरी का काम बहुत है।',
+  },
+  {
+    q: 'उत्तराखंड में डिलीवरी पार्टनर कितना कमा सकते हैं?',
+    a: 'उत्तराखंड में delivery partners ₹25,000-45,000 per month कमा सकते हैं। ज़ूम की EV scooter से fuel का खर्च ज़ीरो हो जाता है, इसलिए net earnings ₹35,000+ हो जाते हैं। पेट्रोल scooter पर monthly ₹6,721 सिर्फ़ fuel में जाते हैं, जबकि EV में charging मुफ़्त है।',
+  },
+  {
+    q: 'क्या मैं उत्तराखंड में अपनी पेट्रोल स्कूटी से जुड़ सकता हूँ?',
+    a: 'ज़ूम केवल अपनी EV scooters rent पर देता है, अपनी स्कूटी लाने की ज़रूरत नहीं। ₹4,000 refundable deposit के साथ fully charged scooter, helmet, insurance सब मिल जाएगा। बस अपनी DL और Aadhaar लाओ।',
+  },
+  {
+    q: 'उत्तराखंड के युवाओं के लिए डिलीवरी जॉब अच्छा विकल्प है?',
+    a: 'बिल्कुल! उत्तराखंड के कुमाऊं और गढ़वाल दोनों खंडों के युवा हल्द्वानी और रुद्रपुर में delivery का काम करके ₹35,000+/महीना कमा रहे हैं। Swiggy, Zomato, Zepto, Amazon Flex सभी platforms पर demand है। ईवी स्कूटर से fuel बचत करके savings ज़्यादा होती है।',
+  },
+  {
+    q: 'राज्य के अंदर और बाहर riding के नियम क्या हैं?',
+    a: 'आप हल्द्वानी और रुद्रपुर के 50 km radius में ride कर सकते हैं। हल्द्वानी से नैनीताल, भीमताल, काठगोदाम जा सकते हैं। रुद्रपुर से किच्छा, सितारगंज जा सकते हैं। राज्य की सीमा पार करने (जैसे नेपाल या UP) के लिए पहले से अनुमति लेनी होगी।',
+  },
+]
+
 export default function UttarakhandPage() {
   return (
     <PageShell>
@@ -103,10 +126,10 @@ export default function UttarakhandPage() {
             EV Scooter Rentals in Uttarakhand
           </h1>
           <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            Join Uttarakhand's fastest-growing EV rental network for delivery partners. Get a fully charged
+            Join Uttarakhand&apos;s fastest-growing EV rental network for delivery partners. Get a fully charged
             electric scooter, free charging, helmet, insurance, and 24/7 roadside support. Earn ₹35,000+/month
-            with zero fuel cost and zero maintenance. Currently serving Haldwani and Rudrapur, expanding to
-            Dehradun, Haridwar, and Bareilly soon.
+            with zero fuel cost and zero maintenance. Currently serving Haldwani (Kumaon) and Rudrapur (Udham Singh Nagar),
+            expanding to Dehradun, Haridwar, and Bareilly soon.
           </p>
         </header>
 
@@ -197,9 +220,9 @@ export default function UttarakhandPage() {
             ))}
           </div>
           <div className="mt-6 rounded-2xl border border-primary/30 bg-primary/5 p-6">
-            <h3 className="text-lg font-semibold">Don't see your city?</h3>
+            <h3 className="text-lg font-semibold">Don&apos;t see your city?</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              We're constantly expanding across Uttarakhand. WhatsApp us your city name and we'll notify you the moment ZUUM launches near you.
+              We&apos;re constantly expanding across Uttarakhand. WhatsApp us your city name and we&apos;ll notify you the moment ZUUM launches near you.
             </p>
             <a
               href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hi ZUUM, I am interested in your EV rental service. Please notify me when you launch in my city: [Your City Name]')}`}
@@ -239,6 +262,29 @@ export default function UttarakhandPage() {
           <p className="mt-4 text-xs text-muted-foreground">
             Refundable deposit of ₹4,000 required at scooter handover. Excess km charged at ₹3/km.
           </p>
+        </section>
+
+        {/* Hindi FAQ */}
+        <section className="mt-12">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            हिंदी में जवाब
+          </div>
+          <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
+            अक्सर पूछे जाने वाले सवाल — उत्तराखंड
+          </h2>
+          <div className="mt-6 space-y-3">
+            {hindiFaqs.map((faq, i) => (
+              <details key={`hi-${i}`} className="group rounded-xl border border-border bg-card/40 p-5">
+                <summary className="cursor-pointer list-none">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="font-medium">{faq.q}</h3>
+                    <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                  </div>
+                </summary>
+                <p className="mt-3 text-sm text-muted-foreground">{faq.a}</p>
+              </details>
+            ))}
+          </div>
         </section>
 
         <CTASection
@@ -282,6 +328,20 @@ export default function UttarakhandPage() {
                 priceCurrency: 'INR',
                 offerCount: '3',
               },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: hindiFaqs.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
             }),
           }}
         />
