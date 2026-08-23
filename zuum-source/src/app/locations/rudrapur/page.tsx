@@ -293,6 +293,7 @@ export default function RudrapurPage() {
           title={<>Start Earning in <span>Rudrapur</span> Today</>}
           subtitle={<>Join 35+ delivery partners already earning ₹35,000+/month with ZUUM in Rudrapur. Apply on WhatsApp — get a scooter assigned within 24 hours.</>}
           whatsappMessage="Hi ZUUM, I want to rent an EV scooter in Rudrapur for delivery work. Please share next steps."
+          padded={false}
         />
 
         {/* JSON-LD */}
