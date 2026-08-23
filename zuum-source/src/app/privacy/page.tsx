@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { LegalShell, LegalSection, LegalSubSection } from '@/components/legal-shell'
+import { PageShell } from '@/components/page-shell'
+import { CTASection } from '@/components/cta-section'
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | ZUUM Electric',
@@ -17,11 +20,18 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalShell
-      title="Privacy Policy"
-      description="How ZUUM Electric collects, uses, and protects your personal data under the Digital Personal Data Protection Act, 2023."
-      lastUpdated="August 2026"
-    >
+    <PageShell>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Privacy Policy', url: 'https://zuum.co.in/privacy' },
+        ]}
+      />
+      <LegalShell
+        title="Privacy Policy"
+        description="How ZUUM Electric collects, uses, and protects your personal data under the Digital Personal Data Protection Act, 2023."
+        lastUpdated="August 2026"
+      >
       <LegalSection title="1. Introduction">
         <p>
           ZUUM Electric (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) operates the website
@@ -282,7 +292,17 @@ export default function PrivacyPage() {
           <li><strong>Phone:</strong> +91 79003 33002</li>
           <li><strong>WhatsApp:</strong> https://wa.me/917900333002</li>
         </ul>
-      </LegalSection>
-    </LegalShell>
+            </LegalSection>
+      </LegalShell>
+
+      <CTASection
+        badge="Questions?"
+        title={<>Still have <span>questions?</span></>}
+        subtitle="Our team is available 9:00 AM to 9:00 PM, all days. WhatsApp us for the fastest response."
+        whatsappMessage="Hi ZUUM, I have a question about the Privacy Policy."
+        showRegister={false}
+        padded={false}
+      />
+    </PageShell>
   )
 }
