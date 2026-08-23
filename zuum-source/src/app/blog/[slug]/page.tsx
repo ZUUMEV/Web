@@ -6,6 +6,8 @@ import { blogPosts, getPostBySlug } from '@/lib/blog-posts'
 import { PageShell } from '@/components/page-shell'
 import { CTASection } from '@/components/cta-section'
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
+import { ShareButtons } from '@/components/share-buttons'
+import { AuthorBio } from '@/components/author-bio'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -78,7 +80,6 @@ function processInline(text: string, keyPrefix: string): (string | React.ReactEl
       const textSegment = text.slice(lastIndex, match.index)
       parts.push(...processBold(textSegment, `${keyPrefix}-t-${partIdx++}`))
     }
-    // Process bold inside link text too
     const linkTextParts = processBold(match[1], `${keyPrefix}-lt-${partIdx++}`)
     parts.push(
       <a
@@ -98,13 +99,33 @@ function processInline(text: string, keyPrefix: string): (string | React.ReactEl
   return parts.length > 0 ? parts : [text]
 }
 
+// Extract H2 headings for Table of Contents
+function extractTOC(content: string): { text: string; anchor: string }[] {
+  const lines = content.split('\n')
+  const toc: { text: string; anchor: string }[] = []
+  for (const line of lines) {
+    if (line.startsWith('## ')) {
+      const text = line.slice(3).trim()
+      const anchor = text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '')
+      toc.push({ text, anchor })
+    }
+  }
+  return toc
+}
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  // Enhanced markdown-to-HTML rendering
-  // Supports: H1/H2/H3, bullet lists, links, **bold**, AND markdown tables
+  const toc = extractTOC(post.content)
+
+  // Enhanced markdown-to-HTML rendering with H2 id for TOC anchors
   const renderContent = (content: string) => {
     const lines = content.trim().split('\n')
     const elements: React.ReactElement[] = []
@@ -126,9 +147,8 @@ export default async function BlogPostPage({ params }: PageProps) {
 
     const flushTable = () => {
       if (tableRows.length > 0) {
-        // First row = header, second row = separator (---), rest = body
         const header = tableRows[0] || []
-        const body = tableRows.slice(2) // skip header + separator row
+        const body = tableRows.slice(2)
         elements.push(
           <div key={`tbl-wrap-${tableKey}`} className="my-4 overflow-x-auto rounded-lg border border-border">
             <table className="w-full border-collapse text-sm">
@@ -169,16 +189,13 @@ export default async function BlogPostPage({ params }: PageProps) {
     lines.forEach((line, i) => {
       const trimmed = line.trim()
 
-      // Detect markdown table row: starts AND ends with |
       if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
         flushList()
-        // Parse cells: strip outer pipes, split by |, trim each
         const cells = trimmed.slice(1, -1).split('|').map((c) => c.trim())
         tableRows.push(cells)
         return
       }
 
-      // Headings
       if (line.startsWith('# ')) {
         flushList()
         flushTable()
@@ -190,9 +207,16 @@ export default async function BlogPostPage({ params }: PageProps) {
       } else if (line.startsWith('## ')) {
         flushList()
         flushTable()
+        const text = line.slice(3).trim()
+        const anchor = text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-')
+          .replace(/^-|-$/g, '')
         elements.push(
-          <h2 key={i} className="mt-8 text-2xl font-semibold sm:text-3xl">
-            {line.slice(3)}
+          <h2 key={i} id={anchor} className="mt-8 scroll-mt-20 text-2xl font-semibold sm:text-3xl">
+            {text}
           </h2>
         )
       } else if (line.startsWith('### ')) {
@@ -230,7 +254,6 @@ export default async function BlogPostPage({ params }: PageProps) {
     return elements
   }
 
-  // Related posts (excluding current)
   const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
 
   return (
@@ -287,14 +310,55 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.readingTime}
             </span>
           </div>
+
+          {/* Share Buttons - Top */}
+          <div className="mt-6">
+            <ShareButtons
+              url={`https://zuum.co.in/blog/${post.slug}`}
+              title={post.title}
+            />
+          </div>
         </header>
+
+        {/* Table of Contents */}
+        {toc.length > 0 && (
+          <aside className="mt-8 rounded-xl border border-border bg-muted/30 p-5">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+              Table of Contents
+            </h2>
+            <ol className="mt-3 space-y-1.5 text-sm">
+              {toc.map((item, i) => (
+                <li key={item.anchor} className="flex gap-2">
+                  <span className="text-muted-foreground/60">{i + 1}.</span>
+                  <a
+                    href={`#${item.anchor}`}
+                    className="text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </aside>
+        )}
 
         <article className="mt-8 space-y-4 text-base leading-relaxed">
           {renderContent(post.content)}
         </article>
 
+        {/* Share Buttons - Bottom */}
+        <div className="mt-12 border-t border-border pt-6">
+          <ShareButtons
+            url={`https://zuum.co.in/blog/${post.slug}`}
+            title={post.title}
+          />
+        </div>
+
+        {/* Author Bio */}
+        <AuthorBio author={post.author} />
+
         {/* Related posts */}
-        <section className="mt-16 border-t border-border pt-8">
+        <section className="mt-12 border-t border-border pt-8">
           <h2 className="text-2xl font-semibold">Related Articles</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {relatedPosts.map((rp) => (
