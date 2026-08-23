@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const toc = extractTOC(post.content)
 
-  // Enhanced markdown-to-HTML rendering with H2 id for TOC anchors
+  // Enhanced markdown-to-HTML rendering with tight, natural spacing
   const renderContent = (content: string) => {
     const lines = content.trim().split('\n')
     const elements: React.ReactElement[] = []
@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     const flushList = () => {
       if (listItems.length > 0) {
         elements.push(
-          <ul key={`ul-${listKey++}`} className="ml-6 list-disc space-y-3 text-foreground/90">
+          <ul key={`ul-${listKey++}`} className="my-3 ml-6 list-disc space-y-1.5 text-foreground/90">
             {listItems}
           </ul>
         )
@@ -200,7 +200,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         flushList()
         flushTable()
         elements.push(
-          <h1 key={i} className="mt-8 text-3xl font-bold tracking-tight sm:text-4xl">
+          <h1 key={i} className="mb-3 mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
             {line.slice(2)}
           </h1>
         )
@@ -215,7 +215,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           .replace(/-+/g, '-')
           .replace(/^-|-$/g, '')
         elements.push(
-        <h2 key={i} id={anchor} className="mb-3 mt-10 scroll-mt-20 text-2xl font-semibold sm:text-3xl">
+          <h2 key={i} id={anchor} className="mb-2 mt-8 scroll-mt-20 text-2xl font-semibold sm:text-3xl">
             {text}
           </h2>
         )
@@ -223,26 +223,26 @@ export default async function BlogPostPage({ params }: PageProps) {
         flushList()
         flushTable()
         elements.push(
-          <h3 key={i} className="mb-2 mt-8 text-xl font-semibold sm:text-2xl">
+          <h3 key={i} className="mb-1.5 mt-5 text-xl font-semibold sm:text-2xl">
             {line.slice(4)}
           </h3>
         )
       } else if (line.startsWith('- ')) {
         flushTable()
         listItems.push(
-           <li key={i} className="leading-relaxed pl-1">
+          <li key={i} className="leading-relaxed pl-1">
             {processInline(line.slice(2), `li-${i}`)}
           </li>
         )
       } else if (trimmed === '') {
+        // Skip empty lines - spacing is controlled by element margins
         flushList()
         flushTable()
-        elements.push(<div key={i} className="h-4" />)
       } else {
         flushList()
         flushTable()
         elements.push(
-          <p key={i} className="leading-relaxed text-foreground/90">
+          <p key={i} className="mb-3 leading-relaxed text-foreground/90">
             {processInline(line, `p-${i}`)}
           </p>
         )
@@ -275,7 +275,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           Back to Blog
         </Link>
 
-        <header className="mt-6 border-b border-border pb-8">
+        <header className="mt-6 border-b border-border pb-6">
           <nav className="flex items-center gap-1.5 text-xs text-muted-foreground">
             <Link href="/" className="hover:text-foreground">Home</Link>
             <ChevronRight className="h-3 w-3" />
@@ -296,7 +296,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {post.title}
           </h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+          <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <span className="inline-flex items-center gap-1.5">
               <User className="h-4 w-4" />
               {post.author}
@@ -312,7 +312,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           {/* Share Buttons - Top */}
-          <div className="mt-6">
+          <div className="mt-4">
             <ShareButtons
               url={`https://zuum.co.in/blog/${post.slug}`}
               title={post.title}
@@ -322,7 +322,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {/* Table of Contents */}
         {toc.length > 0 && (
-          <aside className="mt-8 rounded-xl border border-border bg-muted/30 p-5">
+          <aside className="mt-6 rounded-xl border border-border bg-muted/30 p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Table of Contents
             </h2>
@@ -342,12 +342,12 @@ export default async function BlogPostPage({ params }: PageProps) {
           </aside>
         )}
 
-        <article className="mt-8 space-y-4 text-base leading-relaxed">
+        <article className="mt-6 text-base leading-relaxed">
           {renderContent(post.content)}
         </article>
 
         {/* Share Buttons - Bottom */}
-        <div className="mt-12 border-t border-border pt-6">
+        <div className="mt-8 border-t border-border pt-6">
           <ShareButtons
             url={`https://zuum.co.in/blog/${post.slug}`}
             title={post.title}
