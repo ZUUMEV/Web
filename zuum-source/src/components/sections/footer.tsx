@@ -118,11 +118,17 @@ export function Footer() {
                 ['Cost Comparison', '/#compare'],
                 ['FAQ', '/#faq'],
                 ['Our Impact', '/#impact'],
-              ].map(([label, href]) => (
+             ].map(([label, href]) => (
                 <li key={href}>
                   <Link
                     href={href}
                     className="text-muted-foreground transition-colors hover:text-foreground"
+                    onClick={(e) => {
+                      if (href === '/' && typeof window !== 'undefined' && window.location.pathname === '/') {
+                        e.preventDefault()
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                      }
+                    }}
                   >
                     {label}
                   </Link>
