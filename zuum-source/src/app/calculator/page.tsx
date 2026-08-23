@@ -282,11 +282,10 @@ export default function CalculatorPage() {
                 uses standard 12% interest rate for 3-year two-wheeler loan.
               </p>
             </details>
-          </div>
+                   </div>
         </section>
-      </main>
 
-              {/* Hindi FAQ Section */}
+        {/* Hindi FAQ Section */}
         <section className="mt-16">
           <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             हिंदी में जवाब
@@ -315,7 +314,7 @@ export default function CalculatorPage() {
                 </div>
               </summary>
               <p className="mt-3 text-sm text-muted-foreground">
-                सही सवाल! लेकिन गणना बताती है कि 3 साल में पेट्रोल स्कूटर पर ₹4,85,624 खर्च होते हैं, और 3 साल बाद उसकी कीमत सिर्फ़ ₹40,000 रह जाती है (60% depreciation)। जबकि ज़ूम ईवी रेंट में 3 साल का खर्च सिर्फ़ ₹2,23,200। मतलब रेंट करके ₹2,22,424 की बचत! "खुद का" स्कूटर के लिए आप ₹2.2 लाख ज़्यादा चुका रहे हैं।
+                सही सवाल! लेकिन गणना बताती है कि 3 साल में पेट्रोल स्कूटर पर ₹4,85,624 खर्च होते हैं, और 3 साल बाद उसकी कीमत सिर्फ़ ₹40,000 रह जाती है (60% depreciation)। जबकि ज़ूम ईवी रेंट में 3 साल का खर्च सिर्फ़ ₹2,23,200। मतलब रेंट करके ₹2,22,424 की बचत!
               </p>
             </details>
 
@@ -344,6 +343,7 @@ export default function CalculatorPage() {
             </details>
           </div>
         </section>
+      </main>
 
       <CTASection
         badge="Calculate Profit"
