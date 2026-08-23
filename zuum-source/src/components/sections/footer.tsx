@@ -112,6 +112,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
              {[
                 ['Home', '/'],
+                ['Calculate Profit', '/calculator'],
                 ['Blog', '/blog'],
                 ['Plans', '/#plans'],
                 ['How to Join', '/#how-to-join'],
