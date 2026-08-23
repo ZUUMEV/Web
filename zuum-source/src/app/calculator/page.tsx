@@ -9,13 +9,19 @@ import { ProfitCalculator } from '@/components/profit-calculator'
 export const metadata: Metadata = {
   title: 'EV vs Petrol Scooter Savings Calculator | ZUUM Electric',
   description: 'Calculate how much you save by renting an EV scooter vs buying a petrol scooter for delivery work. Real cost comparison: fuel, EMI, maintenance, insurance. Save ₹6,074/month.',
-  keywords: [
+ keywords: [
     'EV scooter savings calculator',
     'petrol vs electric scooter calculator',
     'delivery partner savings calculator',
     'bike rent vs buy calculator India',
     'EV rental calculator Uttarakhand',
     'scooter cost comparison India',
+    'ईवी बनाम पेट्रोल कैलकुलेटर',
+    'स्कूटर रेंट बनाम खरीद',
+    'डिलीवरी पार्टनर बचत कैलकुलेटर',
+    'बाइक रेंट कैलकूलेटर उत्तराखंड',
+    'Haldwani me bike rent calculator',
+    'Rudrapur me scooty rent',
   ],
   alternates: { canonical: 'https://zuum.co.in/calculator' },
   openGraph: {
@@ -66,6 +72,24 @@ export default function CalculatorPage() {
             for delivery work. Real numbers, real savings — no marketing fluff.
           </p>
         </header>
+
+     {/* Hindi Summary Box */}
+        <div className="mt-6 rounded-2xl border border-primary/30 bg-primary/5 p-5 sm:p-6">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">💡</span>
+            <div>
+              <h2 className="text-base font-semibold sm:text-lg">
+                ईवी बनाम पेट्रोल स्कूटर — असली बचत कैलकुलेटर
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                यह कैलकुलेटर बताता है कि पेट्रोल स्कूटर खरीदने के बजाय ज़ूम ईवी रेंट करके आप कितना बचा सकते हैं।
+                रोज़ 100 किमी चलाने पर पेट्रोल स्कूटर का असली खर्च <strong className="text-foreground">₹12,274/महीना</strong> है
+                (EMI + ईंधन + रखरखाव + इंश्योरेंस), जबकि ज़ूम ईवी का सिर्फ़ <strong className="text-foreground">₹6,200/महीना</strong>।
+                मतलब <strong className="text-primary">₹6,074/महीना</strong> या <strong className="text-primary">₹72,888/साल</strong> की बचत!
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Interactive Calculator */}
         <section className="mt-8">
@@ -262,6 +286,65 @@ export default function CalculatorPage() {
         </section>
       </main>
 
+              {/* Hindi FAQ Section */}
+        <section className="mt-16">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            हिंदी में जवाब
+          </div>
+          <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
+            ईवी बनाम पेट्रोल — अक्सर पूछे जाने वाले सवाल
+          </h2>
+          <div className="mt-6 space-y-3">
+            <details className="group rounded-xl border border-border bg-card/40 p-5">
+              <summary className="cursor-pointer list-none">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-medium">क्या ईवी स्कूटर रेंट पेट्रोल से सस्ता है?</h3>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                </div>
+              </summary>
+              <p className="mt-3 text-sm text-muted-foreground">
+                हाँ, बहुत ज़्यादा! ईवी रेंट से ₹6,074/महीना (सब खर्च मिलाकर) बचत होती है। पेट्रोल स्कूटर का असली खर्च ₹12,274/महीना है (EMI + ईंधन + रखरखाव + इंश्योरेंस), जबकि ज़ूम ईवी का सिर्फ़ ₹6,200/महीना। 5 साल में ₹4.4 लाख+ की बचत।
+              </p>
+            </details>
+
+            <details className="group rounded-xl border border-border bg-card/40 p-5">
+              <summary className="cursor-pointer list-none">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-medium">अगर मैं खुद स्कूटर खरीद लूँ तो 2-3 साल बाद वो मेरी हो जाएगी?</h3>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                </div>
+              </summary>
+              <p className="mt-3 text-sm text-muted-foreground">
+                सही सवाल! लेकिन गणना बताती है कि 3 साल में पेट्रोल स्कूटर पर ₹4,85,624 खर्च होते हैं, और 3 साल बाद उसकी कीमत सिर्फ़ ₹40,000 रह जाती है (60% depreciation)। जबकि ज़ूम ईवी रेंट में 3 साल का खर्च सिर्फ़ ₹2,23,200। मतलब रेंट करके ₹2,22,424 की बचत! "खुद का" स्कूटर के लिए आप ₹2.2 लाख ज़्यादा चुका रहे हैं।
+              </p>
+            </details>
+
+            <details className="group rounded-xl border border-border bg-card/40 p-5">
+              <summary className="cursor-pointer list-none">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-medium">ईवी स्कूटर की बैटरी कितने साल चलती है?</h3>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                </div>
+              </summary>
+              <p className="mt-3 text-sm text-muted-foreground">
+                ज़ूम ईवी स्कूटर की बैटरी 80-100 किमी per charge चलती है। बैटरी की उम्र 3-5 साल है, और बैटरी रिप्लेसमेंट ज़ूम की ज़िम्मेदारी है — आपको कुछ नहीं देना। यही रेंट का सबसे बड़ा फायदा है।
+              </p>
+            </details>
+
+            <details className="group rounded-xl border border-border bg-card/40 p-5">
+              <summary className="cursor-pointer list-none">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-medium">क्या मैं घर पर ईवी चार्ज कर सकता हूँ?</h3>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                </div>
+              </summary>
+              <p className="mt-3 text-sm text-muted-foreground">
+                ज़ूम हल्द्वानी और रुद्रपुर में free charging stations देता है। घर पर चार्ज करना संभव है लेकिन ज़रूरी नहीं — स्टेशन चार्जिंग ज़्यादा तेज़ और मुफ़्त है। आप unlimited बार charge कर सकते हैं।
+              </p>
+            </details>
+          </div>
+        </section>
+
       <CTASection
         badge="Calculate Profit"
         title={<>Ready to save <span>₹6,074/month?</span></>}
@@ -291,6 +374,51 @@ export default function CalculatorPage() {
         }}
       />
 
+            {/* Hindi FAQ JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'क्या ईवी स्कूटर रेंट पेट्रोल से सस्ता है?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'हाँ, बहुत ज़्यादा! ईवी रेंट से ₹6,074/महीना बचत होती है। पेट्रोल स्कूटर का असली खर्च ₹12,274/महीना है, जबकि ज़ूम ईवी का सिर्फ़ ₹6,200/महीना। 5 साल में ₹4.4 लाख+ की बचत।',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'अगर मैं खुद स्कूटर खरीद लूँ तो 2-3 साल बाद वो मेरी हो जाएगी?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '3 साल में पेट्रोल स्कूटर पर ₹4,85,624 खर्च होते हैं, और 3 साल बाद उसकी कीमत सिर्फ़ ₹40,000 रह जाती है। ज़ूम ईवी रेंट में 3 साल का खर्च सिर्फ़ ₹2,23,200। रेंट करके ₹2,22,424 की बचत।',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'ईवी स्कूटर की बैटरी कितने साल चलती है?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ज़ूम ईवी स्कूटर की बैटरी 80-100 किमी per charge चलती है। बैटरी की उम्र 3-5 साल है, और बैटरी रिप्लेसमेंट ज़ूम की ज़िम्मेदारी है।',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'क्या मैं घर पर ईवी चार्ज कर सकता हूँ?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ज़ूम हल्द्वानी और रुद्रपुर में free charging stations देता है। घर पर चार्ज करना संभव है लेकिन ज़रूरी नहीं — स्टेशन चार्जिंग ज़्यादा तेज़ और मुफ़्त है।',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      
       {/* FAQPage JSON-LD */}
       <script
         type="application/ld+json"
