@@ -48,6 +48,33 @@ const platforms = [
   { name: 'Flipkart', status: 'Available', color: '#2874F0' },
 ]
 
+const hindiFaqs = [
+  {
+    q: 'हल्द्वानी में ज़ूम से ईवी स्कूटर रेंट कैसे करें?',
+    a: 'व्हाट्सएप पर +91 79003 33002 पर संपर्क करें या हमारी वेबसाइट पर रजिस्ट्रेशन फॉर्म भरें। ड्राइविंग लाइसेंस, आधार कार्ड और ₹4,000 रिफंडेबल डिपॉज़िट के साथ 24 घंटे में स्कूटर अलॉट हो जाएगा। हल्द्वानी कुमाऊं का मुख्य शहर है, इसलिए हमारी टीम यहाँ तुरंत सेवा देती है।',
+  },
+  {
+    q: 'कुमाऊं के अन्य शहरों से आने वाले युवाओं के लिए हल्द्वानी में डिलीवरी जॉब अच्छा विकल्प है?',
+    a: 'बिल्कुल! हल्द्वानी कुमाऊं क्षेत्र (नैनीताल, अल्मोड़ा, पिथौरागढ़, बागेश्वर, चंपावत) का commercial hub है। यहाँ Swiggy, Zomato, Zepto, Amazon Flex सभी platforms पर high demand है। मॉल रोड, भोटिया पड़ाव, काठगोदम जैसे zones में रोज़ 30-40 deliveries मिलती हैं। कुमाऊं के युवा हल्द्वानी में रहकर ₹35,000+/महीना कमा सकते हैं।',
+  },
+  {
+    q: 'हल्द्वानी में स्विगी डिलीवरी पार्टनर कितना कमाता है?',
+    a: 'हल्द्वानी में Swiggy delivery partners ₹25,000-40,000 per month कमाते हैं। ज़ूम की EV scooter से fuel का खर्च ज़ीरो हो जाता है, इसलिए net earnings ₹35,000+ हो जाते हैं। पेट्रोल scooter पर monthly ₹6,721 सिर्फ़ fuel में जाते हैं, जबकि EV में charging मुफ़्त है।',
+  },
+  {
+    q: 'हल्द्वानी में charging का कोई खर्चा है?',
+    a: 'नहीं, बिल्कुल मुफ़्त! ज़ूम charging stations पर unlimited free charging है। हल्द्वानी city center में हमारा station है जहाँ आप कभी भी charge कर सकते हैं। यही ईवी का सबसे बड़ा फायदा है — पेट्रोल में ₹6,721/महीना खर्च, ईवी में ₹0।',
+  },
+  {
+    q: 'अगर स्कूटर खराब हो जाए तो क्या करें?',
+    a: 'ज़ूम हल्द्वानी में 24/7 breakdown support देता है। व्हाट्सएप या कॉल करें — 45 मिनट में हमारी टीम पहुँच जाएगी। अगर scooter तुरंत repair न हो सके, तो 2 घंटे में replacement scooter दे दिया जाएगा। आपकी कमाई कभी रुकेगी नहीं।',
+  },
+  {
+    q: 'क्या मैं अपनी स्कूटी लाकर ज़ूम से जुड़ सकता हूँ?',
+    a: 'नहीं, ज़ूम अपनी EV scooters rent पर देता है। आपको अपनी scooter लाने की ज़रूरत नहीं है। हम ₹4,000 refundable deposit के साथ fully charged scooter, helmet, insurance सब provide करते हैं। बस अपनी DL और Aadhaar लाओ, बाकी सब हमारी ज़िम्मेदारी।',
+  },
+]
+
 const faqs = [
   {
     q: 'How much can I earn as a delivery partner in Haldwani with ZUUM?',
@@ -102,7 +129,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'High Delivery Demand',
-    description: 'Haldwani is the commercial hub of Kumaon — consistently high demand across all delivery platforms.',
+        description: 'Gateway to Kumaon — Haldwani is the commercial capital of the Kumaon region (Nainital, Almora, Pithoragarh). Youth from across Kumaon come here for delivery jobs. Consistently high demand on Swiggy, Zomato, Zepto, and Amazon Flex.',
   },
 ]
 
@@ -133,10 +160,11 @@ export default function HaldwaniPage() {
           <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             EV Scooter Rent in Haldwani for Delivery Partners
           </h1>
-          <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            Rent an electric scooter in Haldwani and start earning ₹35,000+/month as a delivery partner.
-            Free charging, helmet, insurance, and 24/7 local breakdown support included. Plans from ₹300/day.
-            Ride for Swiggy, Zomato, Zepto, Amazon Flex, and more.
+            <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            Haldwani — the commercial capital of Kumaon region. Rent an electric scooter and start earning
+            ₹35,000+/month as a delivery partner. Ideal for youth from Nainital, Almora, Pithoragarh,
+            Bageshwar, and Champawat seeking delivery jobs. Free charging, helmet, insurance, and 24/7
+            local breakdown support. Plans from ₹300/day. Ride for Swiggy, Zomato, Zepto, Amazon Flex.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -270,6 +298,29 @@ export default function HaldwaniPage() {
           </p>
         </section>
 
+                {/* Hindi FAQ */}
+        <section className="mt-12">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            हिंदी में जवाब
+          </div>
+          <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
+            अक्सर पूछे जाने वाले सवाल — हल्द्वानी
+          </h2>
+          <div className="mt-6 space-y-3">
+            {hindiFaqs.map((faq, i) => (
+              <details key={`hi-${i}`} className="group rounded-xl border border-border bg-card/40 p-5">
+                <summary className="cursor-pointer list-none">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="font-medium">{faq.q}</h3>
+                    <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                  </div>
+                </summary>
+                <p className="mt-3 text-sm text-muted-foreground">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="mt-12">
           <h2 className="text-2xl font-semibold sm:text-3xl">FAQ — Haldwani</h2>
@@ -338,7 +389,7 @@ export default function HaldwaniPage() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({
+              mainEntity: [...faqs, ...hindiFaqs].map((f) => ({
                 '@type': 'Question',
                 name: f.q,
                 acceptedAnswer: { '@type': 'Answer', text: f.a },
