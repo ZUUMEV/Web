@@ -110,15 +110,16 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold">Quick Links</h4>
             <ul className="mt-3 space-y-2 text-sm">
-              {[
+             {[
                 ['Home', '/'],
+                ['Blog', '/blog'],
                 ['Plans', '/#plans'],
                 ['How to Join', '/#how-to-join'],
                 ['Benefits', '/#benefits'],
                 ['Cost Comparison', '/#compare'],
                 ['FAQ', '/#faq'],
                 ['Our Impact', '/#impact'],
-             ].map(([label, href]) => (
+              ].map(([label, href]) => (
                 <li key={href}>
                   <Link
                     href={href}
