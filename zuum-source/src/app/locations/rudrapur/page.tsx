@@ -48,6 +48,33 @@ const platforms = [
   { name: 'BlinkIt', status: 'Available', color: '#0C831F' },
 ]
 
+const hindiFaqs = [
+  {
+    q: 'रुद्रपुर में ज़ूम से ईवी स्कूटर रेंट कैसे करें?',
+    a: 'व्हाट्सएप पर +91 79003 33002 पर संपर्क करें या वेबसाइट पर रजिस्ट्रेशन फॉर्म भरें। ड्राइविंग लाइसेंस, आधार कार्ड और ₹4,000 रिफंडेबल डिपॉज़िट के साथ 24 घंटे में स्कूटर अलॉट हो जाएगा। रुद्रपुर उधम सिंह नगर का मुख्य औद्योगिक शहर है, इसलिए यहाँ डिलीवरी का काम साल भर रहता है।',
+  },
+  {
+    q: 'SIIDCUL इंडस्ट्रियल एरिया में डिलीवरी का काम कैसे मिलता है?',
+    a: 'SIIDCUL (State Infrastructure and Industrial Development Corporation) रुद्रपुर का सबसे बड़ा industrial hub है जहाँ 500+ फैक्ट्रीज़ हैं। Amazon Flex और Flipkart यहाँ सबसे ज़्यादा deliveries देते हैं। दिन में 9 AM - 6 PM के बीच package delivery का सबसे ज़्यादा demand रहता है। ज़ूम scooter पर आप SIIDCUL में आसानी से ₹1,500-2,000/day कमा सकते हैं।',
+  },
+  {
+    q: 'रुद्रपुर में डिलीवरी पार्टनर कितना कमाते हैं?',
+    a: 'रुद्रपुर में delivery partners ₹25,000-45,000 per month कमाते हैं। SIIDCUL की वजह से Amazon Flex पर बहुत demand रहती है। ज़ूम की EV scooter से fuel का खर्च ज़ीरो हो जाता है, इसलिए net earnings ₹35,000+ हो जाते हैं। पेट्रोल scooter पर monthly ₹6,721 सिर्फ़ fuel में जाते हैं।',
+  },
+  {
+    q: 'क्या मैं किच्छा या सितारगंज में रहकर रुद्रपुर में डिलीवरी कर सकता हूँ?',
+    a: 'बिल्कुल! रुद्रपुर, किच्छा और सितारगंज के बीच की दूरी कम है (15-30 km)। बहुत सारे riders किच्छा/सितारगंज से रुद्रपुर आकर delivery करते हैं। ज़ूम scooter आपको 50 km radius में ride करने की permission देता है जिसमें ये सभी शहर आ जाते हैं।',
+  },
+  {
+    q: 'रुद्रपुर में चार्जिंग स्टेशन कहाँ है?',
+    a: 'ज़ूम का charging station रुद्रपुर city में है। रजिस्ट्रेशन के बाद exact address व्हाट्सएप पर share किया जाएगा। चार्जिंग पूरी तरह मुफ़्त है — unlimited charging, zero cost। यही ईवी का सबसे बड़ा फायदा है।',
+  },
+  {
+    q: 'अगर स्कूटर खराब हो जाए तो क्या करें?',
+    a: 'ज़ूम रुद्रपुर में 24/7 breakdown support देता है। व्हाट्सएप या कॉल करें — 45 मिनट में हमारी टीम पहुँच जाएगी। अगर scooter तुरंत repair न हो सके, तो 2 घंटे में replacement scooter दे दिया जाएगा। आपकी कमाई कभी रुकेगी नहीं।',
+  },
+]
+
 const faqs = [
   {
     q: 'How much can I earn as a delivery partner in Rudrapur with ZUUM?',
@@ -79,7 +106,7 @@ const faqs = [
   },
   {
     q: 'How do I join ZUUM in Rudrapur?',
-    a: 'Simple! WhatsApp us at +91 79003 33002 or fill the registration form on our homepage. Our team will guide you through KYC, deposit payment, and scooter handover — usually completed within 24 hours.',
+   a: 'Simple! WhatsApp us at +91 79003 33002 or fill the registration form on our homepage. Our team will guide you through KYC, deposit payment, and scooter handover — usually completed within 24 hours.',
   },
 ]
 
@@ -134,9 +161,10 @@ export default function RudrapurPage() {
             EV Scooter Rent in Rudrapur for Delivery Partners
           </h1>
           <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            Rent an electric scooter in Rudrapur and start earning ₹35,000+/month as a delivery partner.
-            Free charging, helmet, insurance, and 24/7 local breakdown support included. Plans from ₹300/day.
-            High demand from SIIDCUL industrial belt for Amazon Flex, Flipkart, Swiggy, and Zomato.
+            Rudrapur — the industrial capital of Udham Singh Nagar district. Rent an electric scooter and start earning
+            ₹35,000+/month as a delivery partner. Ideal for riders targeting SIIDCUL industrial area for Amazon Flex,
+            Flipkart, and package deliveries. Free charging, helmet, insurance, and 24/7 local breakdown support.
+            Plans from ₹300/day. Also serves Kichha and Sitarganj.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -270,6 +298,29 @@ export default function RudrapurPage() {
           </p>
         </section>
 
+        {/* Hindi FAQ */}
+        <section className="mt-12">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            हिंदी में जवाब
+          </div>
+          <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
+            अक्सर पूछे जाने वाले सवाल — रुद्रपुर
+          </h2>
+          <div className="mt-6 space-y-3">
+            {hindiFaqs.map((faq, i) => (
+              <details key={`hi-${i}`} className="group rounded-xl border border-border bg-card/40 p-5">
+                <summary className="cursor-pointer list-none">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="font-medium">{faq.q}</h3>
+                    <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                  </div>
+                </summary>
+                <p className="mt-3 text-sm text-muted-foreground">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="mt-12">
           <h2 className="text-2xl font-semibold sm:text-3xl">FAQ — Rudrapur</h2>
@@ -338,7 +389,7 @@ export default function RudrapurPage() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({
+              mainEntity: [...faqs, ...hindiFaqs].map((f) => ({
                 '@type': 'Question',
                 name: f.q,
                 acceptedAnswer: { '@type': 'Answer', text: f.a },
