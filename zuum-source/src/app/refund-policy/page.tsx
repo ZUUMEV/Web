@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { LegalShell, LegalSection, LegalSubSection } from '@/components/legal-shell'
+import { PageShell } from '@/components/page-shell'
+import { CTASection } from '@/components/cta-section'
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 
 export const metadata: Metadata = {
   title: 'Refund & Cancellation Policy | ZUUM Electric',
@@ -17,11 +20,18 @@ export const metadata: Metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <LegalShell
-      title="Refund & Cancellation Policy"
-      description="How refunds and cancellations work for ZUUM Electric scooter rentals in Haldwani and Rudrapur, Uttarakhand."
-      lastUpdated="August 2026"
-    >
+    <PageShell>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Refund Policy', url: 'https://zuum.co.in/refund-policy' },
+        ]}
+      />
+      <LegalShell
+        title="Refund & Cancellation Policy"
+        description="How refunds and cancellations work for ZUUM Electric scooter rentals in Haldwani and Rudrapur, Uttarakhand."
+        lastUpdated="August 2026"
+      >
       <LegalSection title="1. Overview">
         <p>
           This Refund and Cancellation Policy applies to all rental payments and security deposits
@@ -209,7 +219,17 @@ export default function RefundPolicyPage() {
           <li><strong>Phone:</strong> +91 79003 33002</li>
           <li><strong>WhatsApp:</strong> https://wa.me/917900333002</li>
         </ul>
-      </LegalSection>
-    </LegalShell>
+            </LegalSection>
+      </LegalShell>
+
+      <CTASection
+        badge="Questions?"
+        title={<>Still have <span>questions?</span></>}
+        subtitle="Our team is available 9:00 AM to 9:00 PM, all days. WhatsApp us for the fastest response."
+        whatsappMessage="Hi ZUUM, I have a question about the Refund Policy."
+        showRegister={false}
+        padded={false}
+      />
+    </PageShell>
   )
 }
