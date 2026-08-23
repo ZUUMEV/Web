@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     const flushList = () => {
       if (listItems.length > 0) {
         elements.push(
-          <ul key={`ul-${listKey++}`} className="ml-6 list-disc space-y-1.5 text-foreground/90">
+          <ul key={`ul-${listKey++}`} className="ml-6 list-disc space-y-3 text-foreground/90">
             {listItems}
           </ul>
         )
@@ -215,7 +215,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           .replace(/-+/g, '-')
           .replace(/^-|-$/g, '')
         elements.push(
-          <h2 key={i} id={anchor} className="mt-8 scroll-mt-20 text-2xl font-semibold sm:text-3xl">
+        <h2 key={i} id={anchor} className="mb-3 mt-10 scroll-mt-20 text-2xl font-semibold sm:text-3xl">
             {text}
           </h2>
         )
@@ -223,14 +223,14 @@ export default async function BlogPostPage({ params }: PageProps) {
         flushList()
         flushTable()
         elements.push(
-          <h3 key={i} className="mt-6 text-xl font-semibold sm:text-2xl">
+          <h3 key={i} className="mb-2 mt-8 text-xl font-semibold sm:text-2xl">
             {line.slice(4)}
           </h3>
         )
       } else if (line.startsWith('- ')) {
         flushTable()
         listItems.push(
-          <li key={i} className="leading-relaxed">
+           <li key={i} className="leading-relaxed pl-1">
             {processInline(line.slice(2), `li-${i}`)}
           </li>
         )
