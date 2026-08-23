@@ -79,11 +79,18 @@ export function CTASection({
             )}
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              {showRegister && (
+            {showRegister && (
                 <Button
                   size="lg"
                   className="h-12 rounded-full px-6 text-base font-semibold"
-                  onClick={() => scrollToRegister()}
+                  onClick={() => {
+                    // If on homepage, scroll to form. Otherwise, go to homepage.
+                    if (typeof window !== 'undefined' && window.location.pathname === '/') {
+                      scrollToRegister()
+                    } else {
+                      window.location.href = '/'
+                    }
+                  }}
                 >
                   <Rocket className="h-5 w-5" />
                   Register Now
