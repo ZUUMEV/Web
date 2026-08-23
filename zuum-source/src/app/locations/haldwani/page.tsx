@@ -293,6 +293,7 @@ export default function HaldwaniPage() {
           title={<>Start Earning in <span>Haldwani</span> Today</>}
           subtitle={<>Join 40+ delivery partners already earning ₹35,000+/month with ZUUM in Haldwani. Apply on WhatsApp — get a scooter assigned within 24 hours.</>}
           whatsappMessage="Hi ZUUM, I want to rent an EV scooter in Haldwani for delivery work. Please share next steps."
+          padded={false}
         />
 
         {/* JSON-LD */}
