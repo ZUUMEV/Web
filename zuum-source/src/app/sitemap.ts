@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
+import { blogPosts } from '@/lib/blog-posts'
 
 const BASE_URL = 'https://zuum.co.in'
 
-// Site-wide images to include in image sitemap
 const SITE_IMAGES = [
   `${BASE_URL}/og-image.png`,
   `${BASE_URL}/zuum-dark-theme-logo.png`,
@@ -22,6 +22,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: SITE_IMAGES,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...blogPosts.map((post) => ({
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
     {
       url: `${BASE_URL}/locations/uttarakhand`,
       lastModified,
