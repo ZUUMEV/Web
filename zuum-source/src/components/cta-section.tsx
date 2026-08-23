@@ -18,6 +18,8 @@ interface CTASectionProps {
   showPhone?: boolean
   /** Show "Register Now" button (default: true) */
   showRegister?: boolean
+  /** Max width class — 'max-w-5xl' for inner pages, 'max-w-7xl' for home */
+  maxWidth?: string
 }
 
 /**
@@ -31,6 +33,7 @@ export function CTASection({
   whatsappMessage,
   showPhone = true,
   showRegister = true,
+  maxWidth = 'max-w-5xl',
 }: CTASectionProps) {
   const whatsappLink = whatsappMessage
     ? `${WHATSAPP_BASE}?text=${encodeURIComponent(whatsappMessage)}`
@@ -38,7 +41,7 @@ export function CTASection({
 
   return (
     <section className="relative scroll-mt-20 py-16 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className={`mx-auto ${maxWidth} px-4 sm:px-6 lg:px-8`}>
         <motion.div
           initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
