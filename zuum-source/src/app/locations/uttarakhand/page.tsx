@@ -246,6 +246,7 @@ export default function UttarakhandPage() {
           title={<>Ready to Start Earning in <span>Uttarakhand?</span></>}
           subtitle={<>Join 75+ delivery partners already earning ₹35,000+/month with ZUUM. Apply on WhatsApp — get a scooter assigned within 24 hours.</>}
           whatsappMessage="Hi ZUUM, I want to rent an EV scooter in Uttarakhand for delivery work. Please share next steps."
+          padded={false}
         />
 
         {/* JSON-LD structured data */}
