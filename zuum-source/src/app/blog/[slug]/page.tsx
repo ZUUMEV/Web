@@ -8,6 +8,7 @@ import { CTASection } from '@/components/cta-section'
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema'
 import { ShareButtons } from '@/components/share-buttons'
 import { AuthorBio } from '@/components/author-bio'
+import { ReadingProgress } from '@/components/reading-progress'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -256,8 +257,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
 
-  return (
+    return (
     <PageShell>
+      <ReadingProgress />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://zuum.co.in/' },
