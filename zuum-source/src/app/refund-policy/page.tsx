@@ -228,7 +228,6 @@ export default function RefundPolicyPage() {
         subtitle="Our team is available 9:00 AM to 9:00 PM, all days. WhatsApp us for the fastest response."
         whatsappMessage="Hi ZUUM, I have a question about the Refund Policy."
         showRegister={false}
-        padded={false}
       />
     </PageShell>
   )
