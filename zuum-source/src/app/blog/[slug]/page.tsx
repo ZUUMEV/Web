@@ -30,11 +30,72 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://zuum.co.in/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.date,
+      modifiedTime: post.updatedDate || post.date,
       authors: [post.author],
       tags: post.tags,
+      images: post.ogImage
+        ? [{ url: post.ogImage, width: 1200, height: 630, alt: post.title }]
+        : undefined,
     },
     keywords: post.tags,
   }
+}
+
+// Process **bold** inside a text segment
+function processBold(text: string, keyPrefix: string): (string | React.ReactElement)[] {
+  const parts: (string | React.ReactElement)[] = []
+  const boldRegex = /\*\*([^*]+)\*\*/g
+  let lastIndex = 0
+  let match
+  let idx = 0
+  while ((match = boldRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+    parts.push(
+      <strong key={`${keyPrefix}-b-${idx++}`} className="font-semibold text-foreground">
+        {match[1]}
+      </strong>
+    )
+    lastIndex = match.index + match[0].length
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex))
+  }
+  return parts.length > 0 ? parts : [text]
+}
+
+// Process inline markdown: links [text](url) AND bold **text**
+function processInline(text: string, keyPrefix: string): (string | React.ReactElement)[] {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts: (string | React.ReactElement)[] = []
+  let lastIndex = 0
+  let match
+  let partIdx = 0
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      const textSegment = text.slice(lastIndex, match.index)
+      parts.push(...processBold(textSegment, `${keyPrefix}-t-${partIdx++}`))
+    }
+    // Process bold inside link text too
+    const linkTextParts = processBold(match[1], `${keyPrefix}-lt-${partIdx++}`)
+    parts.push(
+      <a
+        key={`${keyPrefix}-a-${partIdx++}`}
+        href={match[2]}
+        className="text-primary underline underline-offset-2 hover:opacity-80"
+      >
+        {linkTextParts}
+      </a>
+    )
+    lastIndex = match.index + match[0].length
+  }
+  if (lastIndex < text.length) {
+    const textSegment = text.slice(lastIndex)
+    parts.push(...processBold(textSegment, `${keyPrefix}-t-${partIdx++}`))
+  }
+  return parts.length > 0 ? parts : [text]
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
@@ -42,60 +103,130 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  // Simple markdown-to-HTML rendering
+  // Enhanced markdown-to-HTML rendering
+  // Supports: H1/H2/H3, bullet lists, links, **bold**, AND markdown tables
   const renderContent = (content: string) => {
     const lines = content.trim().split('\n')
     const elements: React.ReactElement[] = []
     let listItems: React.ReactElement[] = []
+    let tableRows: string[][] = []
     let listKey = 0
+    let tableKey = 0
 
     const flushList = () => {
       if (listItems.length > 0) {
-        elements.push(<ul key={`ul-${listKey++}`} className="ml-6 list-disc space-y-1">{listItems}</ul>)
+        elements.push(
+          <ul key={`ul-${listKey++}`} className="ml-6 list-disc space-y-1.5 text-foreground/90">
+            {listItems}
+          </ul>
+        )
         listItems = []
       }
     }
 
+    const flushTable = () => {
+      if (tableRows.length > 0) {
+        // First row = header, second row = separator (---), rest = body
+        const header = tableRows[0] || []
+        const body = tableRows.slice(2) // skip header + separator row
+        elements.push(
+          <div key={`tbl-wrap-${tableKey}`} className="my-4 overflow-x-auto rounded-lg border border-border">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-border bg-muted/50">
+                  {header.map((h, i) => (
+                    <th
+                      key={`th-${tableKey}-${i}`}
+                      className="px-3 py-2.5 text-left font-semibold text-foreground whitespace-nowrap"
+                    >
+                      {processInline(h, `th-${tableKey}-${i}`)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {body.map((row, ri) => (
+                  <tr key={`tr-${tableKey}-${ri}`} className="border-b border-border/60 last:border-0 even:bg-muted/20">
+                    {row.map((cell, ci) => (
+                      <td
+                        key={`td-${tableKey}-${ri}-${ci}`}
+                        className="px-3 py-2 text-foreground/90 align-top"
+                      >
+                        {processInline(cell, `td-${tableKey}-${ri}-${ci}`)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )
+        tableKey++
+        tableRows = []
+      }
+    }
+
     lines.forEach((line, i) => {
+      const trimmed = line.trim()
+
+      // Detect markdown table row: starts AND ends with |
+      if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
+        flushList()
+        // Parse cells: strip outer pipes, split by |, trim each
+        const cells = trimmed.slice(1, -1).split('|').map((c) => c.trim())
+        tableRows.push(cells)
+        return
+      }
+
+      // Headings
       if (line.startsWith('# ')) {
         flushList()
-        elements.push(<h1 key={i} className="mt-8 text-3xl font-bold tracking-tight sm:text-4xl">{line.slice(2)}</h1>)
+        flushTable()
+        elements.push(
+          <h1 key={i} className="mt-8 text-3xl font-bold tracking-tight sm:text-4xl">
+            {line.slice(2)}
+          </h1>
+        )
       } else if (line.startsWith('## ')) {
         flushList()
-        elements.push(<h2 key={i} className="mt-8 text-2xl font-semibold sm:text-3xl">{line.slice(3)}</h2>)
+        flushTable()
+        elements.push(
+          <h2 key={i} className="mt-8 text-2xl font-semibold sm:text-3xl">
+            {line.slice(3)}
+          </h2>
+        )
       } else if (line.startsWith('### ')) {
         flushList()
-        elements.push(<h3 key={i} className="mt-6 text-xl font-semibold sm:text-2xl">{line.slice(4)}</h3>)
+        flushTable()
+        elements.push(
+          <h3 key={i} className="mt-6 text-xl font-semibold sm:text-2xl">
+            {line.slice(4)}
+          </h3>
+        )
       } else if (line.startsWith('- ')) {
-        listItems.push(<li key={i}>{line.slice(2)}</li>)
-      } else if (line.trim() === '') {
+        flushTable()
+        listItems.push(
+          <li key={i} className="leading-relaxed">
+            {processInline(line.slice(2), `li-${i}`)}
+          </li>
+        )
+      } else if (trimmed === '') {
         flushList()
+        flushTable()
         elements.push(<div key={i} className="h-4" />)
       } else {
         flushList()
-        // Process inline links [text](url)
-        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
-        const parts: (string | React.ReactElement)[] = []
-        let lastIndex = 0
-        let match
-        while ((match = linkRegex.exec(line)) !== null) {
-          if (match.index > lastIndex) {
-            parts.push(line.slice(lastIndex, match.index))
-          }
-          parts.push(
-            <a key={`${i}-${match.index}`} href={match[2]} className="text-primary underline hover:opacity-80">
-              {match[1]}
-            </a>
-          )
-          lastIndex = match.index + match[0].length
-        }
-        if (lastIndex < line.length) {
-          parts.push(line.slice(lastIndex))
-        }
-        elements.push(<p key={i} className="leading-relaxed text-foreground/90">{parts}</p>)
+        flushTable()
+        elements.push(
+          <p key={i} className="leading-relaxed text-foreground/90">
+            {processInline(line, `p-${i}`)}
+          </p>
+        )
       }
     })
+
     flushList()
+    flushTable()
     return elements
   }
 
@@ -199,7 +330,8 @@ export default async function BlogPostPage({ params }: PageProps) {
             headline: post.title,
             description: post.description,
             datePublished: post.date,
-            dateModified: post.date,
+            dateModified: post.updatedDate || post.date,
+            image: post.ogImage ? `https://zuum.co.in${post.ogImage}` : 'https://zuum.co.in/og-image.png',
             author: {
               '@type': 'Organization',
               name: post.author,
@@ -208,6 +340,10 @@ export default async function BlogPostPage({ params }: PageProps) {
               '@type': 'Organization',
               name: 'ZUUM Electric',
               url: 'https://zuum.co.in',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://zuum.co.in/zuum-dark-theme-logo.png',
+              },
             },
             mainEntityOfPage: {
               '@type': 'WebPage',
