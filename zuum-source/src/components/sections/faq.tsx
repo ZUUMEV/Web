@@ -158,7 +158,7 @@ const CATEGORIES: {
       },
       {
         q: 'How do I contact support?',
-        a: 'WhatsApp: +91 79003 33002 (fastest). Phone: +91 79003 33002 (24/7). Email: zuumelectric@gmail.com (within 6 hrs). The app also has 1-tap support.',
+        a: 'WhatsApp: +91 79003 33002 (fastest). Phone: +91 79003 33002 (24/7). Email: info@zuum.co.in (within 6 hrs). The app also has 1-tap support.',
       },
       {
         q: 'What if the vehicle is stolen?',
@@ -167,26 +167,6 @@ const CATEGORIES: {
     ],
   },
   {
-    id: 'cancel-refunds',
-    title: 'Cancel & Refunds',
-    emoji: '🔄',
-    icon: RefreshCw,
-    questions: [
-      {
-        q: 'Can I cancel?',
-        a: 'Yes, anytime. Return the vehicle to our centre. Already-paid amount is non-refundable, but charges stop. Deposit refunded in 7 days. No cancellation fee, no lock-in.',
-      },
-      {
-        q: 'When do I get my deposit back?',
-        a: '₹4,000 refunded within 15 working days of return. Conditions: good condition, accessories returned, no outstanding fines/overages. Deductions itemized via WhatsApp.',
-      },
-      {
-        q: 'Can I extend my rental?',
-        a: 'Tap "Renew" in the app or WhatsApp us 1–2 days before expiry. New payment link generated, vehicle stays with you. Auto-renewal can be toggled on or off.',
-      },
-    ],
-  },
-    {
     id: 'cancel-refunds',
     title: 'Cancel & Refunds',
     emoji: '🔄',
@@ -238,7 +218,6 @@ const CATEGORIES: {
       },
     ],
   },
-]
 ]
 
 export function FAQ() {
