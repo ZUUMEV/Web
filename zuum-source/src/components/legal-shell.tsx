@@ -1,7 +1,6 @@
 import { ReactNode } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, MessageCircle } from 'lucide-react'
-import { WHATSAPP_BASE } from '@/lib/site'
+import { ArrowLeft } from 'lucide-react'
 
 interface LegalShellProps {
   title: string
@@ -30,22 +29,6 @@ export function LegalShell({ title, description, lastUpdated, children }: LegalS
       <article className="mt-8 space-y-8 text-sm leading-relaxed text-foreground/90 sm:text-base">
         {children}
       </article>
-
-      <div className="mt-12 rounded-2xl border border-primary/30 bg-primary/5 p-6">
-        <h2 className="text-lg font-semibold">Questions? Talk to us.</h2>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Our team is available 9:00 AM to 9:00 PM, all days of the week. Reach out on WhatsApp for the fastest response.
-        </p>
-        <a
-          href={WHATSAPP_BASE}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-        >
-          <MessageCircle className="h-4 w-4" />
-          WhatsApp Us
-        </a>
-      </div>
     </main>
   )
 }
