@@ -129,7 +129,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'High Delivery Demand',
-        description: 'Gateway to Kumaon — Haldwani is the commercial capital of the Kumaon region (Nainital, Almora, Pithoragarh). Youth from across Kumaon come here for delivery jobs. Consistently high demand on Swiggy, Zomato, Zepto, and Amazon Flex.',
+    description: 'Gateway to Kumaon — Haldwani is the commercial capital of the Kumaon region (Nainital, Almora, Pithoragarh). Youth from across Kumaon come here for delivery jobs. Consistently high demand on Swiggy, Zomato, Zepto, and Amazon Flex.',
   },
 ]
 
@@ -160,7 +160,7 @@ export default function HaldwaniPage() {
           <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             EV Scooter Rent in Haldwani for Delivery Partners
           </h1>
-            <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
+          <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
             Haldwani — the commercial capital of Kumaon region. Rent an electric scooter and start earning
             ₹35,000+/month as a delivery partner. Ideal for youth from Nainital, Almora, Pithoragarh,
             Bageshwar, and Champawat seeking delivery jobs. Free charging, helmet, insurance, and 24/7
@@ -298,7 +298,7 @@ export default function HaldwaniPage() {
           </p>
         </section>
 
-                {/* Hindi FAQ */}
+        {/* Hindi FAQ */}
         <section className="mt-12">
           <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             हिंदी में जवाब
