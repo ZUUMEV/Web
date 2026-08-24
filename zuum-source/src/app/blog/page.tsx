@@ -50,35 +50,52 @@ export default function BlogPage() {
           </p>
         </header>
 
-        <section className="mt-10">
+                <section className="mt-10">
           <div className="grid gap-6 sm:grid-cols-2">
             {blogPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group rounded-2xl border border-border bg-card/40 p-6 transition-all hover:border-primary/40 hover:bg-card/80 hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card/40 transition-all hover:border-primary/40 hover:bg-card/80 hover:shadow-lg"
               >
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <Calendar className="h-3 w-3" />
-                  <span>{new Date(post.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
-                  <span>•</span>
-                  <Clock className="h-3 w-3" />
-                  <span>{post.readingTime}</span>
-                </div>
-                <h2 className="mt-3 text-xl font-semibold leading-tight group-hover:text-primary">
-                  {post.title}
-                </h2>
-                <p className="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {post.tags.map((tag) => (
-                    <span key={tag} className="rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                  Read more
-                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                {/* Thumbnail */}
+                {post.thumbnail ? (
+                  <div className="aspect-[16/10] overflow-hidden bg-muted">
+                    <img 
+                      src={post.thumbnail} 
+                      alt={post.imageAlt || post.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex aspect-[16/10] items-center justify-center bg-gradient-to-br from-primary/10 to-cyan-400/10 text-5xl">
+                    🛵
+                  </div>
+                )}
+                
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <Calendar className="h-3 w-3" />
+                    <span>{new Date(post.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                    <span>•</span>
+                    <Clock className="h-3 w-3" />
+                    <span>{post.readingTime}</span>
+                  </div>
+                  <h2 className="mt-3 text-xl font-semibold leading-tight group-hover:text-primary">
+                    {post.title}
+                  </h2>
+                  <p className="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                    Read more
+                    <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </div>
                 </div>
               </Link>
             ))}
