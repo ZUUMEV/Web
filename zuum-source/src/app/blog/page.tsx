@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ChevronRight, Clock, Calendar } from 'lucide-react'
+import { ArrowLeft, ChevronRight, Clock, Calendar, Bike } from 'lucide-react'
 import { blogPosts } from '@/lib/blog-posts'
 import { PageShell } from '@/components/page-shell'
 import { CTASection } from '@/components/cta-section'
@@ -58,8 +58,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card/40 transition-all hover:border-primary/40 hover:bg-card/80 hover:shadow-lg"
               >
-                {/* Thumbnail */}
-                {post.thumbnail ? (
+                  {post.thumbnail ? (
                   <div className="aspect-[16/10] overflow-hidden bg-muted">
                     <img 
                       src={post.thumbnail} 
@@ -68,8 +67,8 @@ export default function BlogPage() {
                     />
                   </div>
                 ) : (
-                  <div className="flex aspect-[16/10] items-center justify-center bg-gradient-to-br from-primary/10 to-cyan-400/10 text-5xl">
-                    🛵
+                  <div className="flex aspect-[16/10] items-center justify-center bg-muted/30">
+                    <Bike className="h-16 w-16 text-muted-foreground/30" strokeWidth={1.5} />
                   </div>
                 )}
                 
