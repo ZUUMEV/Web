@@ -262,7 +262,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <ReadingProgress />
       <BreadcrumbSchema
         items={[
-          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Home', url: 'https://zuum.co.in' },
           { name: 'Blog', url: 'https://zuum.co.in/blog' },
           { name: post.title.slice(0, 50) + (post.title.length > 50 ? '...' : ''), url: `https://zuum.co.in/blog/${post.slug}` },
         ]}
