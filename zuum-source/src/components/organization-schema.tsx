@@ -64,7 +64,7 @@ export function WebsiteSchema() {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://zuum.co.in/?q={search_term_string}',
+        urlTemplate: 'https://zuum.co.in?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
