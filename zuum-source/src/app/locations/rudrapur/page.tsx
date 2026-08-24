@@ -399,7 +399,7 @@ export default function RudrapurPage() {
         />
         <BreadcrumbSchema
           items={[
-            { name: 'Home', url: 'https://zuum.co.in/' },
+            { name: 'Home', url: 'https://zuum.co.in' },
             { name: 'Uttarakhand', url: 'https://zuum.co.in/locations/uttarakhand' },
             { name: 'Rudrapur', url: 'https://zuum.co.in/locations/rudrapur' },
           ]}
