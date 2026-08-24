@@ -7,7 +7,7 @@ export async function GET() {
 
 ## Key Pages
 
-- [Home](https://zuum.co.in/): EV scooter rental overview, delivery partner onboarding, plan comparison.
+- [Home](https://zuum.co.in): EV scooter rental overview, delivery partner onboarding, plan comparison.
 - [Plans & Pricing](https://zuum.co.in/#plans): Daily ₹300 (100 km), Weekly ₹1,600 (700 km), Monthly ₹6,000 (3,000 km). Extra km at ₹3/km.
 - [How to Join](https://zuum.co.in/#how-to-join): 3-step onboarding — register & verify KYC, choose plan, pay & start riding. Most riders on road within 24 hours.
 - [Benefits](https://zuum.co.in/#benefits): Zero fuel cost, zero maintenance, 24/7 breakdown support, free helmet, comprehensive insurance.
