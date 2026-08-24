@@ -27,6 +27,9 @@ export const blogPosts: BlogPost[] = [
     readingTime: '8 min read',
     tags: ['Swiggy', 'Haldwani', 'Earnings', 'Delivery Partner'],
     ogImage: '/og-image.png',
+    thumbnail: '/blog/swiggy-haldwani.jpg',
+    heroImage: '/blog/swiggy-haldwani.jpg',
+    imageAlt: 'Swiggy delivery partner in Haldwani riding an EV scooter',
     content: `# How Much Does a Swiggy Delivery Partner Earn in Haldwani? (2026 Guide)
 
 If you are considering becoming a Swiggy delivery partner in Haldwani, you are probably wondering how much you can actually earn. With the rising cost of petrol and increasing competition, understanding your real earnings potential is crucial before making the leap.
