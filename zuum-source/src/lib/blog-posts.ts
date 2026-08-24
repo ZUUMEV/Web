@@ -34,7 +34,7 @@ In this comprehensive 2026 guide, we break down real earnings data from active d
 
 Swiggy delivery partners in Haldwani typically earn between ₹25,000 to ₹40,000 per month, depending on hours worked and delivery volume. According to [Swiggy's official delivery partner page](https://www.swiggy.com/swiggy-it), earnings vary based on location, time slots, and order volume.
 
-With an EV scooter rental from [ZUUM Electric](https://zuum.co.in/), you can push this to ₹35,000+ by saving on fuel costs — a game-changer for delivery partners in tier-2 cities like Haldwani. The earnings potential is real, but only if you understand the cost structure that eats into your daily income. Many new joiners focus only on gross earnings and ignore the silent drain of fuel, maintenance, and EMI payments. This guide shows you both sides of the equation so you can make an informed decision.
+With an EV scooter rental from [ZUUM Electric](https://zuum.co.in), you can push this to ₹35,000+ by saving on fuel costs — a game-changer for delivery partners in tier-2 cities like Haldwani. The earnings potential is real, but only if you understand the cost structure that eats into your daily income. Many new joiners focus only on gross earnings and ignore the silent drain of fuel, maintenance, and EMI payments. This guide shows you both sides of the equation so you can make an informed decision.
 
 ## Earnings Breakdown: How Much Per Delivery?
 
@@ -416,7 +416,7 @@ ZUUM provides 24/7 roadside breakdown support. Average response time is 45 minut
 
 For delivery partners in India, **EV scooter rental is the clear winner** over petrol scooter ownership. You save ₹6,074 every month, enjoy zero maintenance, free charging, and 24/7 support. The math is simple, the choice is obvious.
 
-[Start your EV rental journey with ZUUM today](https://zuum.co.in/) — WhatsApp +91 79003 33002.
+[Start your EV rental journey with ZUUM today](https://zuum.co.in) — WhatsApp +91 79003 33002.
 
 **Related articles:**
 - [How Much Does a Swiggy Delivery Partner Earn in Haldwani?](https://zuum.co.in/blog/swiggy-delivery-partner-earnings-haldwani-2026)
@@ -755,7 +755,7 @@ ZUUM EV scooters have a range of 80-100 km per full charge. With free battery sw
 
 ## Conclusion
 
-For delivery partners, the best EV scooter depends on your budget. If you want ownership, TVS iQube is best. If you prefer zero-risk rental with free charging, [ZUUM Electric](https://zuum.co.in/) offers EV rentals from ₹300/day — and saves you ₹6,074 every month compared to petrol scooter ownership.
+For delivery partners, the best EV scooter depends on your budget. If you want ownership, TVS iQube is best. If you prefer zero-risk rental with free charging, [ZUUM Electric](https://zuum.co.in) offers EV rentals from ₹300/day — and saves you ₹6,074 every month compared to petrol scooter ownership.
 
 **Ready to switch to EV?** [Contact ZUUM Electric](https://zuum.co.in/contact) or WhatsApp +91 79003 33002.
 
