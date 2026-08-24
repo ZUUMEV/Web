@@ -347,7 +347,7 @@ export default function UttarakhandPage() {
         />
         <BreadcrumbSchema
           items={[
-            { name: 'Home', url: 'https://zuum.co.in/' },
+            { name: 'Home', url: 'https://zuum.co.in' },
             { name: 'Uttarakhand', url: 'https://zuum.co.in/locations/uttarakhand' },
           ]}
         />
