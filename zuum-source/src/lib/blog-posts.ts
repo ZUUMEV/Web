@@ -27,8 +27,6 @@ export const blogPosts: BlogPost[] = [
     readingTime: '8 min read',
     tags: ['Swiggy', 'Haldwani', 'Earnings', 'Delivery Partner'],
     ogImage: '/og-image.png',
-    thumbnail: '/blog/swiggy-haldwani.jpg',
-    heroImage: '/blog/swiggy-haldwani.jpg',
     imageAlt: 'Swiggy delivery partner in Haldwani riding an EV scooter',
     content: `# How Much Does a Swiggy Delivery Partner Earn in Haldwani? (2026 Guide)
 
