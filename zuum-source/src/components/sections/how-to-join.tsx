@@ -10,6 +10,8 @@ const STEPS = [
     title: 'Register & Verify',
     description:
       "Just a quick 2-wheeler DL, Aadhaar card & PAN card, Bank Account check, and you're ready to go. KYC takes less than 30 minutes.",
+    accent: 'text-emerald-500',
+    bgAccent: 'bg-emerald-500/10',
   },
   {
     icon: CreditCard,
@@ -17,6 +19,8 @@ const STEPS = [
     title: 'Choose Your Plan',
     description:
       'Select a plan that fits you — daily, weekly, or monthly. Change anytime as your earnings grow. No lock-in, no surprises.',
+    accent: 'text-amber-500',
+    bgAccent: 'bg-amber-500/10',
   },
   {
     icon: Rocket,
@@ -24,6 +28,8 @@ const STEPS = [
     title: 'Pay & Start Earning',
     description:
       'Activate your ID and start earning with zero fuel cost and zero maintenance cost. You focus on earnings — we handle servicing and repairs.',
+    accent: 'text-violet-500',
+    bgAccent: 'bg-violet-500/10',
   },
 ]
 
@@ -57,8 +63,7 @@ export function HowToJoin() {
               transition={{ duration: 0.45, delay: i * 0.08 }}
               className="group relative rounded-3xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
             >
-              <div className="mb-4 flex items-center justify-between">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+            <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${s.bgAccent} ${s.accent} transition-transform group-hover:scale-110`}>
                   <s.icon className="h-6 w-6" />
                 </div>
                 <span className="text-3xl font-black text-primary/15">{s.step}</span>
