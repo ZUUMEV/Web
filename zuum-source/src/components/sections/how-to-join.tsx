@@ -3,7 +3,16 @@
 import { motion } from 'framer-motion'
 import { FileCheck, CreditCard, Rocket } from 'lucide-react'
 
-const STEPS = [
+type Step = {
+  icon: typeof FileCheck
+  step: string
+  title: string
+  description: string
+  accent: string
+  bgAccent: string
+}
+
+const STEPS: Step[] = [
   {
     icon: FileCheck,
     step: '01',
