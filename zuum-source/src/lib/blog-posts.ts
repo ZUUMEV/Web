@@ -10,6 +10,9 @@ export interface BlogPost {
   tags: string[]
   content: string
   ogImage?: string
+  thumbnail?: string
+  heroImage?: string
+  imageAlt?: string
 }
 
 export const blogPosts: BlogPost[] = [
