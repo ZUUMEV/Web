@@ -76,7 +76,7 @@ export default function ContactPage() {
     <PageShell>
       <BreadcrumbSchema
         items={[
-          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Home', url: 'https://zuum.co.in' },
           { name: 'Contact', url: 'https://zuum.co.in/contact' },
         ]}
       />
