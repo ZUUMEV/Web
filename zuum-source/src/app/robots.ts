@@ -58,7 +58,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://zuum.co.in/sitemap.xml',
+    sitemaps: ['https://zuum.co.in/sitemap.xml'],
     host: 'https://zuum.co.in',
   }
 }
