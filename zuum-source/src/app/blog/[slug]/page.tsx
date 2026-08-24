@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ChevronRight, Calendar, Clock, User } from 'lucide-react'
+import { ArrowLeft, ChevronRight, Calendar, Clock, User, Bike } from 'lucide-react'
 import { blogPosts, getPostBySlug } from '@/lib/blog-posts'
 import { PageShell } from '@/components/page-shell'
 import { CTASection } from '@/components/cta-section'
@@ -354,8 +354,8 @@ export default async function BlogPostPage({ params }: PageProps) {
             />
           </div>
         ) : (
-          <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-2xl border border-border bg-muted/40 text-6xl">
-            🛵
+          <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-2xl border border-border bg-muted/30">
+            <Bike className="h-24 w-24 text-muted-foreground/30" strokeWidth={1.5} />
           </div>
         )}
 
