@@ -344,6 +344,21 @@ export default async function BlogPostPage({ params }: PageProps) {
           </aside>
         )}
 
+       {/* Hero Image */}
+        {post.heroImage ? (
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+            <img 
+              src={post.heroImage} 
+              alt={post.imageAlt || post.title}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        ) : (
+          <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-2xl border border-border bg-muted/40 text-6xl">
+            🛵
+          </div>
+        )}
+
         <article className="mt-6 text-base leading-relaxed">
           {renderContent(post.content)}
         </article>
