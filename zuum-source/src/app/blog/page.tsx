@@ -23,7 +23,7 @@ export default function BlogPage() {
     <PageShell>
       <BreadcrumbSchema
         items={[
-          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Home', url: 'https://zuum.co.in' },
           { name: 'Blog', url: 'https://zuum.co.in/blog' },
         ]}
       />
