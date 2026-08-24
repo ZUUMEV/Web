@@ -264,7 +264,7 @@ export function FAQ() {
         />
 
         {/* Search bar */}
-        <div className="mx-auto mt-8 max-w-xl">
+        <div className="mx-auto mt-8 max-w-3xl">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
