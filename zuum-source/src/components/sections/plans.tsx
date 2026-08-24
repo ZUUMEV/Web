@@ -21,6 +21,7 @@ type Plan = {
   perfect: string
   highlighted?: boolean
   accent: string
+  iconColor: string
 }
 
 const PLANS: Plan[] = [
