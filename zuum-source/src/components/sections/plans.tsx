@@ -40,6 +40,7 @@ const PLANS: Plan[] = [
     ],
     perfect: 'Test rides & quick gigs',
     accent: 'from-sky-400/20 to-emerald-400/10',
+    iconColor: 'text-sky-500',
   },
   {
     id: 'weekly',
@@ -59,6 +60,7 @@ const PLANS: Plan[] = [
     perfect: 'Most popular for delivery partners',
     highlighted: true,
     accent: 'from-primary/25 to-primary/5',
+    iconColor: 'text-primary',
   },
   {
     id: 'monthly',
@@ -78,6 +80,7 @@ const PLANS: Plan[] = [
     ],
     perfect: 'Best value — maximum savings',
     accent: 'from-amber-400/20 to-rose-400/10',
+    iconColor: 'text-amber-500',
   },
 ]
 
@@ -137,7 +140,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       )}
 
       <div className={cn('mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br', plan.accent)}>
-        <plan.icon className="h-7 w-7 text-primary" />
+        <plan.icon className={cn('h-7 w-7', plan.iconColor)} />
       </div>
 
       <h3 className="text-xl font-bold">{plan.name}</h3>
