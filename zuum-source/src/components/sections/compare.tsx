@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Fuel, Wrench, ShieldCheck, Bike, TrendingDown, IndianRupee, Banknote, Cog } from 'lucide-react'
+import { Fuel, Wrench, ShieldCheck, Bike, TrendingUp, Calculator, Banknote, Cog } from 'lucide-react'
 import { SectionHeader } from './how-to-join'
 import { cn } from '@/lib/utils'
 
@@ -149,7 +149,7 @@ export function Compare() {
             {/* Left: Savings amount */}
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center">
               <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/20 text-primary">
-                <TrendingDown className="h-8 w-8" />
+              <TrendingUp className="h-8 w-8" />
               </div>
               <div>
                 <h3 className="text-xl font-bold sm:text-2xl">Your Monthly Savings</h3>
@@ -166,8 +166,8 @@ export function Compare() {
               href="/calculator"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-primary/30 hover:shadow-2xl"
             >
-              <IndianRupee className="h-5 w-5" />
-              Calculate Your Exact Savings
+              <Calculator className="h-5 w-5" />
+              Calculate Profit
             </a>
           </div>
         </motion.div>
