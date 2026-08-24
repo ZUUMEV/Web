@@ -27,6 +27,8 @@ export const blogPosts: BlogPost[] = [
     readingTime: '8 min read',
     tags: ['Swiggy', 'Haldwani', 'Earnings', 'Delivery Partner'],
     ogImage: '/og-image.png',
+    thumbnail: '/blog/swiggy-haldwani.jpg',
+    heroImage: '/blog/swiggy-haldwani.jpg',
     imageAlt: 'Swiggy delivery partner in Haldwani riding an EV scooter',
     content: `# How Much Does a Swiggy Delivery Partner Earn in Haldwani? (2026 Guide)
 
@@ -231,6 +233,8 @@ Ready to start? [Apply on WhatsApp](https://wa.me/917900333002) or visit our [Ha
     readingTime: '12 min read',
     tags: ['EV', 'Petrol', 'Cost Comparison', 'Delivery'],
     ogImage: '/og-image.png',
+    thumbnail: '/blog/ev-vs-petrol.jpg',
+    heroImage: '/blog/ev-vs-petrol.jpg',
     content: `# EV vs Petrol Scooter for Delivery Work — Full Cost Breakdown (2026)
 
 The debate between electric and petrol scooters for delivery work is heating up in India. With rising fuel prices and the government's push for electric mobility, delivery partners across India are asking: should I buy a petrol scooter or rent an electric one?
@@ -437,6 +441,8 @@ For delivery partners in India, **EV scooter rental is the clear winner** over p
     readingTime: '10 min read',
     tags: ['Rudrapur', 'Delivery Partner', 'Guide', 'Onboarding'],
     ogImage: '/og-image.png',
+    thumbnail: '/blog/rudrapur-guide.jpg',
+    heroImage: '/blog/rudrapur-guide.jpg',
     content: `# How to Become a Delivery Partner in Rudrapur — Complete 2026 Guide
 
 Rudrapur, with its SIIDCUL industrial belt, offers massive opportunities for delivery partners. From Amazon Flex package deliveries to Swiggy food orders, the city has become a hub for gig economy workers in Uttarakhand.
@@ -622,6 +628,8 @@ Ready to start? [Rent a ZUUM EV scooter in Rudrapur](https://zuum.co.in/location
     readingTime: '15 min read',
     tags: ['Electric Scooters', 'EV', 'Delivery', 'Buying Guide'],
     ogImage: '/og-image.png',
+    thumbnail: '/blog/best-ev-scooters.jpg',
+    heroImage: '/blog/best-ev-scooters.jpg',
     content: `# Best Electric Scooters for Delivery Partners in India 2026
 
 Choosing the right electric scooter can make or break your delivery earnings. With dozens of EV models launched in India in the past 2 years, it is confusing to pick the right one for full-time delivery work.
