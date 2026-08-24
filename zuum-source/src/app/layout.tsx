@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Zuum Electric - Delivery Partner Job Earn ₹35,000+/Month",
     description:
       "Free bike, fuel & helmet with Zuum Electric! Earn ₹35,000+/month as a delivery partner in Uttarakhand. Daily/weekly/monthly EV rentals. Apply now!",
-    url: "https://zuum.co.in/",
+    url: "https://zuum.co.in",
     siteName: "Zuum Electric",
     type: "website",
     locale: "en_IN",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://zuum.co.in/",
+    canonical: "https://zuum.co.in",
   },
 };
 
