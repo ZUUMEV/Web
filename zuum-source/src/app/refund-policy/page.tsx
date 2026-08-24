@@ -23,7 +23,7 @@ export default function RefundPolicyPage() {
     <PageShell>
       <BreadcrumbSchema
         items={[
-          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Home', url: 'https://zuum.co.in' },
           { name: 'Refund Policy', url: 'https://zuum.co.in/refund-policy' },
         ]}
       />
