@@ -19,31 +19,43 @@ const BENEFITS = [
     icon: Wallet,
     title: 'Fixed Plan. Direct Payouts.',
     desc: 'No surprises. Your rental is fixed — your earnings go straight to your pocket.',
+    accent: 'text-emerald-500',
+    bgAccent: 'bg-emerald-500/10',
   },
   {
     icon: Fuel,
     title: 'Zero Fuel Cost',
     desc: 'Electric means ₹0 on petrol. Charge at home or our swap stations — both included.',
+    accent: 'text-amber-500',
+    bgAccent: 'bg-amber-500/10',
   },
   {
     icon: Wrench,
     title: 'Zero Maintenance Cost',
     desc: 'Brake pads, tyres, motor, battery — all on us. Just ride and earn.',
+    accent: 'text-sky-500',
+    bgAccent: 'bg-sky-500/10',
   },
   {
     icon: LifeBuoy,
     title: 'End-to-End Breakdown Support',
     desc: 'Stuck on the road? Tap SOS in the app — we reach you in 30 minutes with a backup bike.',
+    accent: 'text-rose-500',
+    bgAccent: 'bg-rose-500/10',
   },
   {
     icon: BatteryCharging,
     title: 'Independent Charging',
     desc: 'Portable + home charger included. Top up anywhere, anytime — no queue, no waiting.',
+    accent: 'text-teal-500',
+    bgAccent: 'bg-teal-500/10',
   },
   {
     icon: Bike,
     title: 'Total Freedom',
     desc: 'Ride freely and earn more. No mandatory hours, no minimum trips — you are the boss.',
+    accent: 'text-violet-500',
+    bgAccent: 'bg-violet-500/10',
   },
 ]
 
@@ -52,11 +64,15 @@ const HIGHLIGHTS = [
     icon: HandCoins,
     title: 'Lowest Security Deposit',
     desc: 'We keep deposits minimal so you can start earning without a heavy investment. Just ₹4,000 refundable, once.',
+    accent: 'text-fuchsia-500',
+    bgAccent: 'bg-fuchsia-500/10',
   },
   {
     icon: ShieldCheck,
     title: 'Zero Maintenance Worries',
     desc: 'Regular servicing and breakdown support included. Focus on riding — we handle all servicing and repairs.',
+    accent: 'text-cyan-500',
+    bgAccent: 'bg-cyan-500/10',
   },
 ]
 
@@ -89,7 +105,7 @@ export function Benefits() {
                 aria-hidden
                 className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-primary/10 opacity-0 blur-2xl transition-opacity group-hover:opacity-100"
               />
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl ${b.bgAccent} ${b.accent}`}>
                 <b.icon className="h-5 w-5" />
               </div>
               <h3 className="text-base font-bold">{b.title}</h3>
@@ -129,7 +145,7 @@ export function Benefits() {
                   key={h.title}
                   className="rounded-2xl border border-border bg-background/60 p-5 backdrop-blur"
                 >
-                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                  <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl ${h.bgAccent} ${h.accent}`}>
                     <h.icon className="h-5 w-5" />
                   </div>
                   <h4 className="text-base font-bold">{h.title}</h4>
