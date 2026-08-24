@@ -23,7 +23,7 @@ export default function PrivacyPage() {
     <PageShell>
       <BreadcrumbSchema
         items={[
-          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Home', url: 'https://zuum.co.in' },
           { name: 'Privacy Policy', url: 'https://zuum.co.in/privacy' },
         ]}
       />
