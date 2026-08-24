@@ -23,7 +23,7 @@ export default function TermsPage() {
     <PageShell>
       <BreadcrumbSchema
         items={[
-          { name: 'Home', url: 'https://zuum.co.in/' },
+          { name: 'Home', url: 'https://zuum.co.in' },
           { name: 'Terms of Service', url: 'https://zuum.co.in/terms' },
         ]}
       />
