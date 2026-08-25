@@ -29,7 +29,7 @@ export default function Home() {
         <CTASection
           badge="Ready to Ride"
           title={<>Ready to start your <span>delivery journey?</span></>}
-          subtitle={<>Join <strong className="text-foreground">75+ riders</strong> in Haldwani & Rudrapur. Book your EV scooter today and start earning with zero fuel cost.</>}
+          subtitle={<>Join <strong className="text-foreground">500+ riders</strong> in Haldwani & Rudrapur. Book your EV scooter today and start earning with zero fuel cost.</>}
         />
       </PageShell>
     </>
