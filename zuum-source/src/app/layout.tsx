@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -20,7 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zuum.co.in"),
-  title: "Zuum Electric - Delivery Partner Job Earn ₹35,000+/Month",
+  manifest: "/manifest.webmanifest",
+  title: "ZUUM Electric — Earn ₹35K+/Month as Delivery Partner",
   description:
     "Free bike, fuel & helmet with Zuum Electric! Earn ₹35,000+/month as a delivery partner in Uttarakhand. Daily/weekly/monthly EV rentals. Apply now!",
   keywords: [
@@ -80,6 +81,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zuum.co.in",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#00FF68",
 };
 
 export default function RootLayout({
