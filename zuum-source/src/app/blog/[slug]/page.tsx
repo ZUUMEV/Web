@@ -197,7 +197,15 @@ export default async function BlogPostPage({ params }: PageProps) {
         return
       }
 
-      if (line.startsWith('# ')) {
+      if (line.startsWith('> ')) {
+        flushList()
+        flushTable()
+        elements.push(
+          <blockquote key={`bq-${i}`} className="my-4 border-l-4 border-primary/40 pl-4 text-foreground/80 italic">
+            {processInline(line.slice(2), `bq-${i}`)}
+          </blockquote>
+        )
+      } else if (line.startsWith('# ')) {
         flushList()
         flushTable()
         // Blog post title H1 is already rendered in the header (line ~297).
