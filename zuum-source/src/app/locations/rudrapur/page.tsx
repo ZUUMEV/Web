@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     description: 'Rent EV scooter in Rudrapur for delivery work. Free fuel, helmet, insurance & 24/7 support. Earn ₹35,000+/month. Daily ₹300 / Weekly ₹1,600. Apply now!',
     url: 'https://zuum.co.in/locations/rudrapur',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ZUUM Electric — EV Scooter Rent in Rudrapur' }],
   },
 }
 
