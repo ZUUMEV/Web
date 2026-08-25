@@ -404,6 +404,28 @@ export default function HaldwaniPage() {
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              serviceType: 'EV Scooter Rental',
+              provider: {
+                '@type': 'LocalBusiness',
+                name: 'ZUUM Electric',
+                url: 'https://zuum.co.in',
+              },
+              areaServed: ['Haldwani', 'Kathgodam', 'Kaladungi', 'Lalkuan'],
+              description: 'EV scooter rental for delivery partners in Haldwani. Free charging, helmet, insurance. Plans from ₹300/day.',
+              offers: [
+                { '@type': 'Offer', price: '300', priceCurrency: 'INR', description: 'Daily plan — 100 km included' },
+                { '@type': 'Offer', price: '1600', priceCurrency: 'INR', description: 'Weekly plan — 700 km included' },
+                { '@type': 'Offer', price: '6000', priceCurrency: 'INR', description: 'Monthly plan — 3,000 km included' },
+              ],
+            }),
+          }}
+        />
         <BreadcrumbSchema
           items={[
             { name: 'Home', url: 'https://zuum.co.in' },
