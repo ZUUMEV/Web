@@ -109,7 +109,7 @@ export function Plans() {
 
         <p className="mt-8 text-center text-sm text-muted-foreground">
           One-time refundable security deposit: <strong className="text-foreground">₹4,000</strong> ·
-          Extra km: <strong className="text-foreground">₹2/km</strong> · Cancel anytime, no lock-in
+          Extra km: <strong className="text-foreground">₹3/km</strong> · Cancel anytime, no lock-in
         </p>
       </div>
     </section>
