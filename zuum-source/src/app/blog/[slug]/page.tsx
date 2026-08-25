@@ -200,10 +200,19 @@ export default async function BlogPostPage({ params }: PageProps) {
       if (line.startsWith('# ')) {
         flushList()
         flushTable()
+        // Blog post title H1 is already rendered in the header (line ~297).
+        // Markdown # headings become H2 to avoid duplicate H1 tags.
+        const text = line.slice(2).trim()
+        const anchor = text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-')
+          .replace(/^-|-$/g, '')
         elements.push(
-          <h1 key={i} className="mb-3 mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
-            {line.slice(2)}
-          </h1>
+          <h2 key={i} id={anchor} className="mb-2 mt-8 scroll-mt-20 text-2xl font-semibold sm:text-3xl">
+            {text}
+          </h2>
         )
       } else if (line.startsWith('## ')) {
         flushList()
