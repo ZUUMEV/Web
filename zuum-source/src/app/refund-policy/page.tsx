@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       'Refundable deposit, plan cancellation, processing time, and grievance redressal for ZUUM EV scooter rentals.',
     url: 'https://zuum.co.in/refund-policy',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Refund & Cancellation Policy — ZUUM Electric' }],
   },
 }
 
