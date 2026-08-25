@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'EV vs Petrol Scooter Savings Calculator — ZUUM Electric' }],
   },
+    twitter: {
+    card: 'summary_large_image',
+    title: 'EV vs Petrol Scooter Savings Calculator | ZUUM Electric',
+    description: 'Calculate your real savings by switching from petrol scooter to EV rental. Save ₹6,074/month or ₹72,888/year.',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function CalculatorPage() {
