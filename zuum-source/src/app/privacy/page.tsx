@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       'DPDPA 2023 compliant privacy policy for ZUUM Electric delivery partners in Haldwani and Rudrapur.',
     url: 'https://zuum.co.in/privacy',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Privacy Policy — ZUUM Electric' }],
   },
 }
 
