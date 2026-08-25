@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Contact ZUUM Electric' }],
   },
+   twitter: {
+    card: 'summary_large_image',
+    title: 'Contact ZUUM Electric | Haldwani & Rudrapur EV Scooter Rentals',
+    description: 'Reach ZUUM Electric via WhatsApp, phone, or email. Available 9 AM to 9 PM, all days, in Haldwani and Rudrapur.',
+    images: ['/og-image.png'],
+  },
 }
 
 const contactCards = [
