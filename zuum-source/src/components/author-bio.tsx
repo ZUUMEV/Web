@@ -23,7 +23,7 @@ export function AuthorBio({ author }: AuthorBioProps) {
             ZUUM Electric is India&rsquo;s premium EV scooter rental platform for delivery partners.
             We provide free charging, ISI-certified helmets, comprehensive insurance, and 24/7 breakdown
             support across Haldwani and Rudrapur, Uttarakhand. Our mission is to help delivery partners
-            maximize earnings with zero fuel cost and zero maintenance. With 75+ active riders and a
+            maximize earnings with zero fuel cost and zero maintenance. With 500+ active riders and a
             growing fleet, we&rsquo;re building the future of clean, affordable last-mile delivery mobility in India.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
