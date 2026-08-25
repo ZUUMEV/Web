@@ -90,7 +90,7 @@ const CATEGORIES: {
       },
       {
         q: 'Is there a security deposit?',
-        a: 'Flat ₹4,000 refundable, once. Returned within 15 working days of returning the vehicle in good condition. Deductions apply for damage, missing items, or unpaid fines — always itemized via WhatsApp.',
+        a: 'Flat ₹4,000 refundable, once. Returned within 7 business days of returning the vehicle in good condition. Deductions apply for damage, missing items, or unpaid fines — always itemized via WhatsApp.',
       },
       {
         q: "What's included in the ZUUM Plan?",
@@ -178,7 +178,7 @@ const CATEGORIES: {
       },
       {
         q: 'When do I get my deposit back?',
-        a: '₹4,000 refunded within 15 working days of return. Conditions: good condition, accessories returned, no outstanding fines/overages. Deductions itemized via WhatsApp.',
+        a: '₹4,000 refunded within 7 business days of return. Conditions: good condition, accessories returned, no outstanding fines/overages. Deductions itemized via WhatsApp.',
       },
       {
         q: 'Can I extend my rental?',
