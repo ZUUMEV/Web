@@ -3,7 +3,7 @@ export const dynamic = 'force-static'
 export async function GET() {
   const content = `# ZUUM Electric
 
-> ZUUM Electric provides EV scooter rentals for gig-delivery riders in Haldwani and Rudrapur, Uttarakhand, India. Plans from ₹300/day to ₹6,000/month with free charging, insurance, helmet, and maintenance. 75+ active riders, ₹4,000 refundable deposit. Earn ₹35,000+/month with zero fuel cost.
+> ZUUM Electric provides EV scooter rentals for gig-delivery riders in Haldwani and Rudrapur, Uttarakhand, India. Plans from ₹300/day to ₹6,000/month with free charging, insurance, helmet, and maintenance. 500+ active riders, ₹4,000 refundable deposit. Earn ₹35,000+/month with zero fuel cost.
 
 ## Key Pages
 
