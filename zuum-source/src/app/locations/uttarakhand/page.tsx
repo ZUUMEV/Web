@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     description: 'Rent EV scooters in Uttarakhand for delivery work. Free fuel, helmet & 24/7 support. Earn ₹35,000+/month. Plans from ₹300/day.',
     url: 'https://zuum.co.in/locations/uttarakhand',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ZUUM Electric — EV Scooter Rentals in Uttarakhand' }],
   },
 }
 
