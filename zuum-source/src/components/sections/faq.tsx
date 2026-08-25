@@ -94,11 +94,11 @@ const CATEGORIES: {
       },
       {
         q: "What's included in the ZUUM Plan?",
-        a: 'All-inclusive: Electric scooter, comprehensive insurance, free maintenance, 24/7 roadside assistance, free vehicle swap on breakdown, KM allowance per plan (extra ₹2/km), and full Rider App access.',
+        a: 'All-inclusive: Electric scooter, comprehensive insurance, free maintenance, 24/7 roadside assistance, free vehicle swap on breakdown, KM allowance per plan (extra ₹3/km), and full Rider App access.',
       },
       {
         q: 'What if I exceed the KM limit?',
-        a: 'Extra KMs are charged at ₹2/km, billed at cycle end. Live usage is visible in the app. WhatsApp alert at 80% of the limit. If you regularly overrun, we will suggest an upgrade — pro-rated fairly.',
+        a: 'Extra KMs are charged at ₹3/km, billed at cycle end. Live usage is visible in the app. WhatsApp alert at 80% of the limit. If you regularly overrun, we will suggest an upgrade — pro-rated fairly.',
       },
       {
         q: 'Can I switch plans?',
