@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ZUUM Electric Blog — EV Scooter Rentals & Delivery Tips' }],
   },
+    twitter: {
+    card: 'summary_large_image',
+    title: 'ZUUM Electric Blog — EV Scooter Rentals & Delivery Tips',
+    description: 'Expert guides on EV scooter rentals and delivery partner earnings in Uttarakhand.',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function BlogPage() {
