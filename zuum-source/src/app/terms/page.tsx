@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Terms of Service — ZUUM Electric' }],
   },
+    twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Service | ZUUM Electric',
+    description: 'Rental terms and conditions for ZUUM Electric delivery partners in Haldwani and Rudrapur, Uttarakhand.',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function TermsPage() {
