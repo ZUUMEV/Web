@@ -112,7 +112,7 @@ export default function BlogPage() {
       <CTASection
         badge="Ready to Ride"
         title={<>Ready to start your <span>delivery journey?</span></>}
-        subtitle="Join 75+ delivery partners earning ₹35,000+/month with ZUUM Electric in Haldwani and Rudrapur."
+        subtitle="Join 500+ delivery partners earning ₹35,000+/month with ZUUM Electric in Haldwani and Rudrapur."
         whatsappMessage="Hi ZUUM, I read your blog and want to rent an EV scooter for delivery work."
         showRegister={true}
       />
