@@ -17,6 +17,7 @@ export const metadata: Metadata = {
       'Reach ZUUM Electric via WhatsApp, phone, or email. Available 9 AM to 9 PM, all days, in Haldwani and Rudrapur.',
     url: 'https://zuum.co.in/contact',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Contact ZUUM Electric' }],
   },
 }
 
