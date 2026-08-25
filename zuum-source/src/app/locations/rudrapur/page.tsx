@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ZUUM Electric — EV Scooter Rent in Rudrapur' }],
   },
+   twitter: {
+    card: 'summary_large_image',
+    title: 'EV Scooter Rent in Rudrapur - Earn ₹35,000+/Month | ZUUM Electric',
+    description: 'Rent EV scooter in Rudrapur for delivery work. Free fuel, helmet, insurance & 24/7 support. Earn ₹35,000+/month. Daily ₹300 / Weekly ₹1,600. Apply now!',
+    images: ['/og-image.png'],
+  },
 }
 
 const deliveryZones = [
