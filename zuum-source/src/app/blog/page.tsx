@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description: 'Expert guides on EV scooter rentals and delivery partner earnings in Uttarakhand.',
     url: 'https://zuum.co.in/blog',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ZUUM Electric Blog — EV Scooter Rentals & Delivery Tips' }],
   },
 }
 
