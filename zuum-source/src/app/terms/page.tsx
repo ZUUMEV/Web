@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       'Rental terms and conditions for ZUUM Electric delivery partners in Haldwani and Rudrapur, Uttarakhand.',
     url: 'https://zuum.co.in/terms',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Terms of Service — ZUUM Electric' }],
   },
 }
 
