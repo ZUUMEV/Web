@@ -15,6 +15,7 @@ type Plan = {
   icon: typeof Zap
   price: string
   period: string
+  dailyPrice?: string
   allowance: string
   blurb: string
   features: string[]
@@ -31,7 +32,7 @@ const PLANS: Plan[] = [
     icon: Zap,
     price: '₹300',
     period: '/ day',
-    allowance: '100 km / 12 hr',
+    allowance: '100 km / day',
     blurb: 'Ideal for rapid commutes, running errands, or sightseeing around the city.',
     features: [
       'Free helmet included',
@@ -49,6 +50,7 @@ const PLANS: Plan[] = [
     icon: Calendar,
     price: '₹1,600',
     period: '/ week',
+    dailyPrice: '₹229',
     allowance: '700 km / week',
     blurb: 'Excellent for weekly work commutes. No fuel expenses, maximum savings.',
     features: [
@@ -69,6 +71,7 @@ const PLANS: Plan[] = [
     icon: Crown,
     price: '₹6,000',
     period: '/ month',
+    dailyPrice: '₹200',
     allowance: '3,000 km / month',
     blurb: 'Hassle-free, long-term premium lease. Pure ride pleasure, zero commitment.',
     features: [
@@ -147,11 +150,28 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       <h3 className="text-xl font-bold">{plan.name}</h3>
       <p className="mt-1 text-sm text-muted-foreground">{plan.blurb}</p>
 
-      <div className="mt-5 flex items-baseline gap-1">
-        <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
-        <span className="text-sm font-medium text-muted-foreground">{plan.period}</span>
+      {/* Pricing Block */}
+      <div className="mt-5">
+        {/* Original Price (Small Green) */}
+        <div className="text-sm font-medium text-primary">
+          {plan.price} {plan.period}
+        </div>
+
+        {/* Effective Daily Price (Large) */}
+        {plan.dailyPrice ? (
+          <div className="mt-1 flex items-baseline gap-1">
+            <span className="text-4xl font-extrabold tracking-tight text-foreground">{plan.dailyPrice}</span>
+            <span className="text-sm font-medium text-foreground/80">/ day</span>
+          </div>
+        ) : (
+          <div className="mt-1 flex items-baseline gap-1">
+            <span className="text-4xl font-extrabold tracking-tight text-foreground">{plan.price}</span>
+            <span className="text-sm font-medium text-foreground/80">{plan.period}</span>
+          </div>
+        )}
       </div>
-      <div className="mt-1 text-xs font-medium text-primary">{plan.allowance}</div>
+      
+      <div className="mt-1 text-xs font-medium text-muted-foreground">{plan.allowance}</div>
 
       <ul className="mt-6 flex-1 space-y-3">
         {plan.features.map((f) => (
